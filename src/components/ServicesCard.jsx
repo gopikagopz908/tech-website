@@ -9,33 +9,76 @@ export function ServiceCard({
   image = "",
 }) {
   return (
-    <CardContainer className="inter-var">
+<CardContainer className="inter-var !py-0 items-start">
       <CardBody
-        className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  bg-black text-gray-500"
+        className="
+          relative
+          group/card
+          w-[378px]
+          h-[300px]
+          rounded-[20px]
+          border
+          border-white/10
+          bg-[#0B1120]
+          p-6
+          text-gray-500
+          backdrop-blur-xl
+          overflow-hidden
+          shadow-[0_0_40px_rgba(168,85,247,0.12)]
+          transition-all
+          duration-500
+          hover:shadow-[0_0_60px_rgba(217,70,239,0.25)]
+        "
       >
+        {/* Top Glow */}
+        <div className="absolute top-0 left-1/2 h-24 w-40 -translate-x-1/2 bg-fuchsia-500/20 blur-3xl opacity-0 transition-all duration-500 group-hover/card:opacity-100" />
+
+        {/* Title */}
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white"
+          className="text-[24px] font-semibold text-white"
         >
           {title}
         </CardItem>
+
+        {/* Description */}
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          className="
+            mt-3
+            text-[14px]
+            leading-[22px]
+            text-gray-400
+            max-w-[320px]
+          "
         >
           {description}
         </CardItem>
-        <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
+
+        {/* Image */}
+        <CardItem
+          translateZ="100"
+          rotateX={10}
+          rotateZ={-3}
+          className="mt-6"
+        >
           <img
             src={image}
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
+            alt={title}
+            className="
+              w-[320px]
+              h-[100px]
+              rounded-[3px]
+              object-cover
+              mx-auto
+              transition-all
+              duration-500
+              group-hover/card:scale-[1.03]
+              group-hover/card:shadow-[0_0_30px_rgba(217,70,239,0.3)]
+            "
           />
         </CardItem>
-       
       </CardBody>
     </CardContainer>
   );

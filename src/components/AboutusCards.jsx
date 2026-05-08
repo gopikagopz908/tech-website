@@ -1,293 +1,127 @@
-// "use client";
-
-// import React from "react";
-// import { easeIn, easeInOut, easeOut, motion } from "framer-motion";
-// import ThreeDCard from "./ThreeDCard";
-
-// // Animation Variants
-// const fadeInUp = {
-//   hidden: { opacity: 0, y: 40 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       duration: 1,
-//       ease: "easeOut" 
-//     }
-    
-//   },
-// };
-
-// const slideLeft = {
-//   hidden: { opacity: 0, x: -40 },
-//   visible: {
-//     opacity: 1,
-//     x: 0,
-//     transition: {
-//       duration:0.8,
-//       ease:easeInOut,
-//     },
-//   },
-// };
-
-// const slideRight = {
-//   hidden: { opacity: 0, x: 50 },
-//   visible: {
-//     opacity: 1,
-//     x: 0,
-//     transition: {
-//       duration:0.8,
-//       ease:easeInOut,
-//     },
-//   },
-// };
-
-// const AboutusCards = () => {
-//   return (
-//     <div className="w-full max-w-[100vw] overflow-x-hidden px-6 md:px-16 py-16 text-white flex flex-col gap-10">
-//       {/* Section Header */}
-//       <motion.div
-//         variants={fadeInUp}
-//         initial="hidden"
-//         whileInView="visible"
-//         viewport={{ once: true, amount: 0.5 }}
-//         className="text-center px-4 md:px-0 max-w-4xl mx-auto"
-//       >
-//         <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 leading-tight">
-//           About Us
-//         </h1>
-//         <p className="mt-6 text-gray-300 text-base md:text-lg leading-relaxed">
-//           At Mentric Group, our endeavor is to provide holistic training and technology solutions – fundamental and advanced technical skills, soft skills, job-oriented and upskilling training programs – in various sectors. We work with organizations in assessing and improving various management processes using state-of-the-art technology, resulting in efficient utilization of resources.
-//         </p>
-//       </motion.div>
-
-//       {/* Row 1: Mentric Technologies */}
-//       <motion.div
-//         className="w-full flex flex-col md:flex-row items-center justify-center gap-10"
-//         initial="hidden"
-//         whileInView="visible"
-//         viewport={{ once: true, amount: 0.5 }}
-//       >
-//         <motion.div
-//           className="w-full md:w-1/2 flex justify-center"
-//           variants={slideLeft}
-//         >
-//           <ThreeDCard
-//             image="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
-//             alt="Mentric Technologies"
-//           />
-//         </motion.div>
-
-//         <motion.div
-//           className="w-full md:w-1/2 space-y-6"
-//           variants={slideRight}
-//         >
-//           <h2 className="text-4xl font-bold text-purple-400">Mentric Technologies</h2>
-//           <p className="text-gray-300 text-lg">
-//           Mentric Technologies is a forward-thinking digital technology company committed to building impactful and scalable solutions for modern businesses. From custom software development to advanced cloud integrations. With a strong emphasis on innovation, agility, and excellence, we help organizations stay ahead in today’s rapidly evolving tech landscape.
-//           </p>
-//           <p className="text-gray-400">
-//           With a deep focus on the education and training sector, we craft impactful digital solutions that empower educators, ignite student potential, and equip institutions and teams to thrive in a tech-driven future.          </p>
-//           <p className="text-gray-500 text-sm">
-//             Founded in 2017 • Trusted by 50+ clients • Driven by technology & vision
-//           </p>
-//         </motion.div>
-//       </motion.div>
-
-//       {/* Row 2: Mentric Training & Consulting */} 
-//       <motion.div
-//         className="w-full flex flex-col md:flex-row items-center justify-center gap-10"
-//         initial="hidden"
-//         whileInView="visible"
-//         viewport={{ once: true, amount: 0.5 }}
-//       >
-//         <motion.div
-//           className="w-full md:w-1/2 space-y-6"
-//           variants={slideLeft}
-//         >
-//           <h2 className="text-4xl font-bold text-purple-400">Mentric Training & Consulting</h2>
-//           <p className="text-gray-300 text-lg">
-//             Our consulting division is committed to empowering the next generation of developers, analysts, and technologists through intensive, hands-on training programs.
-//           </p>
-//           <p className="text-gray-400">
-//             We offer mentorship, bootcamps, and real-world project experience to bridge the gap between academic learning and industry requirements.
-//           </p>
-//           <p className="text-gray-500 text-sm">
-//             100000+ Students Trained • Corporate Workshops • Internship-integrated Learning Paths
-//           </p>
-//         </motion.div>
-
-//         <motion.div
-//           className="w-full md:w-1/2 flex justify-center"
-//           variants={slideRight}
-//         >
-//           <ThreeDCard
-//             image="/training.jpg"
-//             alt="Mentric Training & Consulting"
-//           />
-//         </motion.div>
-//       </motion.div>
-//     </div>
-//   );
-// };
-
-// export default AboutusCards;
-
-
-
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import ThreeDCard from "./ThreeDCard";
+import StatsCard from "./StatsCard";
+import CountCard from "./CountCard";
 
-// 🔹 Smooth fade + lift (linear wave, no spring lag)
-const smoothFadeUp = {
+const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeInOut",
-    },
+    transition: { duration: 0.7 },
   },
 };
 
-// 🔹 Slide animations (same timing)
-const slideLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeInOut",
-    },
-  },
-};
-
-const slideRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeInOut",
-    },
-  },
-};
 
 const AboutusCards = () => {
   return (
-    <div className="w-full max-w-[100vw] overflow-x-hidden px-6 md:px-16 py-16 text-white flex flex-col gap-16">
-      {/* Section Header */}
-      <motion.div
-        variants={smoothFadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        className="text-center px-4 md:px-0 max-w-4xl mx-auto"
-      >
-        <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 leading-tight">
-          About Us
-        </h1>
+    <div className="relative w-full overflow-hidden text-white">
 
-        <p className="mt-6 text-gray-300 text-base md:text-lg leading-relaxed">
-          At Mentric Group, our endeavor is to provide holistic training and
-          technology solutions – fundamental and advanced technical skills, soft
-          skills, job-oriented and upskilling training programs – in various
-          sectors. We work with organizations in assessing and improving various
-          management processes using state-of-the-art technology, resulting in
-          efficient utilization of resources.
-        </p>
-      </motion.div>
+      {/* 🔥 Background */}
+<div className="absolute inset-0 bg-[url('/aboutus.png')] bg-cover bg-center bg-no-repeat" />
 
-      {/* Row 1: Mentric Technologies */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
-        className="w-full flex flex-col md:flex-row items-center justify-center gap-10"
-      >
-        <motion.div
-          className="w-full md:w-1/2 flex justify-center"
-          variants={slideLeft}
-        >
-          <ThreeDCard
-            image="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
-            alt="Mentric Technologies"
-          />
-        </motion.div>
+      {/* Gradient Glow Left */}
+      <div className="absolute top-10 left-0 w-72 h-72 bg-purple-600 opacity-30 blur-[120px] rounded-full" />
+
+      {/* Gradient Glow Right */}
+      <div className="absolute bottom-10 right-0 w-72 h-72 bg-pink-600 opacity-30 blur-[120px] rounded-full" />
+
+      {/* Content */}
+      <div className="relative px-6 md:px-16 py-16 flex flex-col gap-20">
+
+        {/* Header */}
 
         <motion.div
-          className="w-full md:w-1/2 space-y-6"
-          variants={slideRight}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          className="text-center max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl font-bold text-purple-400">
-            Mentric Technologies
-          </h2>
-          <p className="text-gray-300 text-lg">
-            Mentric Technologies is a forward-thinking digital technology
-            company committed to building impactful and scalable solutions for
-            modern businesses. From custom software development to advanced
-            cloud integrations. With a strong emphasis on innovation, agility,
-            and excellence, we help organizations stay ahead in today’s rapidly
-            evolving tech landscape.
-          </p>
-          <p className="text-gray-400">
-            With a deep focus on the education and training sector, we craft
-            impactful digital solutions that empower educators, ignite student
-            potential, and equip institutions and teams to thrive in a
-            tech-driven future.
-          </p>
-          <p className="text-gray-500 text-sm">
-            Founded in 2017 • Trusted by 50+ clients • Driven by technology &
-            vision
-          </p>
-        </motion.div>
-      </motion.div>
+    <h1 className="text-[60px] leading-[75px] font-bold font-['Roboto'] text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+  About Us
+</h1>
 
-      {/* Row 2: Mentric Training & Consulting */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
-        className="w-full flex flex-col md:flex-row items-center justify-center gap-10"
-      >
-        <motion.div
-          className="w-full md:w-1/2 space-y-6"
-          variants={slideLeft}
-        >
-          <h2 className="text-4xl font-bold text-purple-400">
-            Mentric Training & Consulting
-          </h2>
-          <p className="text-gray-300 text-lg">
-            Our consulting division is committed to empowering the next
-            generation of developers, analysts, and technologists through
-            intensive, hands-on training programs.
-          </p>
-          <p className="text-gray-400">
-            We offer mentorship, bootcamps, and real-world project experience to
-            bridge the gap between academic learning and industry requirements.
-          </p>
-          <p className="text-gray-500 text-sm">
-            100000+ Students Trained • Corporate Workshops •
-            Internship-integrated Learning Paths
-          </p>
+<p className="mt-2 text-[#D1D5DC] text-[18px] leading-[29.25px] font-normal font-['Roboto'] text-center">
+  At Mentric Group, our endeavor is to provide holistic training and technology solutions – fundamental and
+  advanced technical skills, soft skills, job-oriented and upskilling training programs – in various sectors. We work
+  with organizations in assessing and improving various management processes using state-of-the-art
+  technology, resulting in efficient utilization of resources.
+</p>
         </motion.div>
 
-        <motion.div
-          className="w-full md:w-1/2 flex justify-center"
-          variants={slideRight}
-        >
-          <ThreeDCard
-            image="/training.jpg"
-            alt="Mentric Training & Consulting"
-          />
-        </motion.div>
-      </motion.div>
+        {/* Row 1 */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+
+          {/* Image */}
+          <motion.div variants={fadeUp}>
+            <ThreeDCard
+              image="/ad.jpeg"
+              alt="Mentric Technologies"
+            />
+          </motion.div>
+
+          {/* Content */}
+          <motion.div variants={fadeUp} className="space-y-5">
+<h2 className="text-[40px] leading-[40px] font-bold font-['Roboto'] text-[#C27AFF]">
+  Mentric Technologies
+</h2>
+
+<p className="text-[#D1D5DC] text-[18px] leading-[28px] font-normal font-['Roboto']">
+Mentric Technologies builds scalable, high-impact digital 
+solutions—empowering modern 
+businesses through innovation, agility, and advanced technology.
+</p>
+
+            {/* Stats */}
+            <div className="flex gap-4 mt-6">
+              <CountCard value="50+" label="Trusted Clients" />
+              <CountCard value="120+" label="Projects Done" />
+             <CountCard value="10+" label="Years Experience" />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Row 2 */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+
+          {/* Text */}
+          <motion.div variants={fadeUp} className="space-y-5">
+            <h2 className="text-3xl font-semibold text-purple-400">
+              Mentric Training & Consulting
+            </h2>
+
+            <p className="text-gray-400">
+              We empower developers and technologists through hands-on training,
+              mentorship, and real-world project experience.
+            </p>
+
+            {/* Stats */}
+
+         <div className="flex gap-4 mt-6">
+              <CountCard value="50+" label="Trusted Clients" />
+              <CountCard value="120+" label="Projects Done" />
+             <CountCard value="10+" label="Years Experience" />
+            </div>
+
+
+            {/* Button */}
+            <button className="mt-4 px-5 py-2 border border-purple-500 rounded-md text-sm hover:bg-purple-600 transition">
+              Mentric Training & Consulting
+            </button>
+          </motion.div>
+
+          {/* Image */}
+          <motion.div variants={fadeUp}>
+            <ThreeDCard
+              image="/training.jpg"
+              alt="Training"
+            />
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 };

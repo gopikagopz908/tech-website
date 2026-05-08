@@ -3,67 +3,327 @@
 import React from "react";
 import { ServiceCard } from "./ServicesCard";
 
-const services = [
+const servicesLeft = [
   {
     title: "Web Development",
     description:
       "Turning ideas into stunning, high-performing websites that work as hard as you do.",
-    image:
-      "/wd2.jpg",
-  },
-  {
-    title: "App Development",
-    description:
-      "Your brand in every pocket—powerful, sleek apps designed for real-world impact.",
-    image:
-      "/md2.jpg",
+    image: "/wd2.jpg",
   },
   {
     title: "Internet of Things",
     description:
       "We connect the unconnected—bridging the physical and digital worlds through smart innovation.",
-    image:
-      "/iot1.jpg",
+    image: "/iot1.jpg",
+  },
+];
+
+const servicesRight = [
+  {
+    title: "App Development",
+    description:
+      "Your brand in every pocket—powerful, sleek apps designed for real-world impact.",
+    image: "/md2.jpg",
   },
   {
     title: "Digital Marketing",
     description:
       "Not just clicks—real conversations, loyal customers, and results that speak for themselves.",
-    image:
-      "/dm2.jpg",
+    image: "/dm2.jpg",
   },
 ];
 
+const ConnectorLeftTop = () => (
+  <svg
+    className="absolute right-[110px] top-[-120px]"
+    width="320"
+    height="320"
+    viewBox="0 0 320 320"
+    fill="none"
+  >
+    <path
+      d="M320 160 C240 160, 180 50, 0 50"
+      stroke="url(#leftTopGradient)"
+      strokeWidth="1.5"
+      fill="none"
+    />
+
+    {/* Nodes */}
+    <circle cx="320" cy="160" r="4" fill="#d946ef" />
+    <circle cx="0" cy="50" r="4" fill="#ffffff" />
+
+    <circle cx="250" cy="145" r="2" fill="#c084fc" />
+    <circle cx="210" cy="120" r="2" fill="#c084fc" />
+    <circle cx="170" cy="90" r="2" fill="#c084fc" />
+    <circle cx="120" cy="65" r="2" fill="#c084fc" />
+    <circle cx="70" cy="55" r="2" fill="#c084fc" />
+
+    {/* Moving Dot */}
+    <circle r="3" fill="#f5d0fe">
+      <animateMotion
+        dur="5s"
+        repeatCount="indefinite"
+        path="M320 160 C240 160, 180 50, 0 50"
+      />
+    </circle>
+
+    <defs>
+      <linearGradient
+        id="leftTopGradient"
+        x1="320"
+        y1="160"
+        x2="0"
+        y2="50"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#d946ef" />
+        <stop offset="1" stopColor="#ffffff30" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+const ConnectorLeftBottom = () => (
+  <svg
+    className="absolute right-[110px] bottom-[-120px]"
+    width="320"
+    height="320"
+    viewBox="0 0 320 320"
+    fill="none"
+  >
+    <path
+      d="M320 160 C240 160, 180 270, 0 270"
+      stroke="url(#leftBottomGradient)"
+      strokeWidth="1.5"
+      fill="none"
+    />
+
+    <circle cx="320" cy="160" r="4" fill="#d946ef" />
+    <circle cx="0" cy="270" r="4" fill="#ffffff" />
+
+    <circle cx="250" cy="175" r="2" fill="#c084fc" />
+    <circle cx="210" cy="205" r="2" fill="#c084fc" />
+    <circle cx="170" cy="230" r="2" fill="#c084fc" />
+    <circle cx="120" cy="250" r="2" fill="#c084fc" />
+    <circle cx="70" cy="265" r="2" fill="#c084fc" />
+
+    <circle r="3" fill="#f5d0fe">
+      <animateMotion
+        dur="5s"
+        repeatCount="indefinite"
+        path="M320 160 C240 160, 180 270, 0 270"
+      />
+    </circle>
+
+    <defs>
+      <linearGradient
+        id="leftBottomGradient"
+        x1="320"
+        y1="160"
+        x2="0"
+        y2="270"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#d946ef" />
+        <stop offset="1" stopColor="#ffffff30" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+const ConnectorRightTop = () => (
+  <svg
+    className="absolute left-[110px] top-[-120px]"
+    width="320"
+    height="320"
+    viewBox="0 0 320 320"
+    fill="none"
+  >
+    <path
+      d="M0 160 C80 160, 140 50, 320 50"
+      stroke="url(#rightTopGradient)"
+      strokeWidth="1.5"
+      fill="none"
+    />
+
+    <circle cx="0" cy="160" r="4" fill="#d946ef" />
+    <circle cx="320" cy="50" r="4" fill="#ffffff" />
+
+    <circle cx="70" cy="145" r="2" fill="#c084fc" />
+    <circle cx="120" cy="120" r="2" fill="#c084fc" />
+    <circle cx="170" cy="90" r="2" fill="#c084fc" />
+    <circle cx="220" cy="65" r="2" fill="#c084fc" />
+    <circle cx="270" cy="55" r="2" fill="#c084fc" />
+
+    <circle r="3" fill="#f5d0fe">
+      <animateMotion
+        dur="5s"
+        repeatCount="indefinite"
+        path="M0 160 C80 160, 140 50, 320 50"
+      />
+    </circle>
+
+    <defs>
+      <linearGradient
+        id="rightTopGradient"
+        x1="0"
+        y1="160"
+        x2="320"
+        y2="50"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#d946ef" />
+        <stop offset="1" stopColor="#ffffff30" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+const ConnectorRightBottom = () => (
+  <svg
+    className="absolute left-[110px] bottom-[-120px]"
+    width="320"
+    height="320"
+    viewBox="0 0 320 320"
+    fill="none"
+  >
+    <path
+      d="M0 160 C80 160, 140 270, 320 270"
+      stroke="url(#rightBottomGradient)"
+      strokeWidth="1.5"
+      fill="none"
+    />
+
+    <circle cx="0" cy="160" r="4" fill="#d946ef" />
+    <circle cx="320" cy="270" r="4" fill="#ffffff" />
+
+    <circle cx="70" cy="175" r="2" fill="#c084fc" />
+    <circle cx="120" cy="205" r="2" fill="#c084fc" />
+    <circle cx="170" cy="230" r="2" fill="#c084fc" />
+    <circle cx="220" cy="250" r="2" fill="#c084fc" />
+    <circle cx="270" cy="265" r="2" fill="#c084fc" />
+
+    <circle r="3" fill="#f5d0fe">
+      <animateMotion
+        dur="5s"
+        repeatCount="indefinite"
+        path="M0 160 C80 160, 140 270, 320 270"
+      />
+    </circle>
+
+    <defs>
+      <linearGradient
+        id="rightBottomGradient"
+        x1="0"
+        y1="160"
+        x2="320"
+        y2="270"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#d946ef" />
+        <stop offset="1" stopColor="#ffffff30" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
 const Services = () => {
   return (
-    <section className="relative px-1 md:px-20 py-24 overflow-hidden bg-black text-white ">
-      {/* Background Blobs */}
-      <div className="absolute -top-20 -left-20 w-80 h-80 bg-purple-600 rounded-full opacity-20 blur-3xl z-0" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-indigo-500 rounded-full opacity-10 blur-3xl z-0" />
+    <section className="relative hidden lg:flex min-h-screen items-center justify-center overflow-hidden bg-[#050816] px-20 py-24 text-white">
+      
+      {/* Background Glow */}
+      <div className="absolute top-[-100px] left-[-100px] h-[400px] w-[400px] rounded-full bg-purple-700/20 blur-3xl" />
+      <div className="absolute bottom-[-100px] right-[-100px] h-[400px] w-[400px] rounded-full bg-fuchsia-700/20 blur-3xl" />
 
-      {/* Section Title */}
-      <div className="text-center mb-12 z-10 relative">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          Our{" "}
-          <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Services
-          </span>
-        </h1>
-        <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-          Empowering your business through technology, design, and marketing.
-        </p>
-      </div>
+      <div className="relative z-10 w-full">
 
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 px-2 sm:grid-cols-2 z-10 relative bg-blue-950 rounded-md">
-        {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            title={service.title}
-            description={service.description}
-            image={service.image}
-          />
-        ))}
+        {/* Title */}
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold">
+            Our{" "}
+            <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Services
+            </span>
+          </h1>
+
+          <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
+            Empowering your business through technology, design, and marketing.
+          </p>
+        </div>
+
+        {/* Layout */}
+        <div className="relative flex items-center justify-between max-w-[1500px] mx-auto">
+
+          {/* LEFT */}
+          <div className="flex flex-col gap-8">
+            {servicesLeft.map((service, index) => (
+              <ServiceCard
+                key={index}
+                title={service.title}
+                description={service.description}
+                image={service.image}
+              />
+            ))}
+          </div>
+
+          {/* CENTER */}
+          <div className="relative flex items-center justify-center">
+
+            <div className="absolute h-[180px] w-[180px] rounded-full bg-fuchsia-600/20 blur-3xl animate-pulse" />
+
+            <ConnectorLeftTop />
+            <ConnectorLeftBottom />
+            <ConnectorRightTop />
+            <ConnectorRightBottom />
+
+            {/* Hexagon */}
+            <div className="relative z-20 flex items-center justify-center">
+              <div className="absolute inset-0 bg-fuchsia-600/40 blur-3xl scale-110" />
+
+              <div
+                className="
+                  relative
+                  w-[280px]
+                  h-[66px]
+                  bg-gradient-to-r
+                  from-[#4b006e]
+                  via-[#2b103f]
+                  to-[#24132f]
+                  border
+                  border-fuchsia-400/30
+                  shadow-[0_0_40px_rgba(217,70,239,0.45)]
+                  flex
+                  items-center
+                  justify-center
+                "
+                style={{
+                  clipPath:
+                    "polygon(6% 0%, 94% 0%, 100% 50%, 94% 100%, 6% 100%, 0% 50%)",
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-40" />
+
+                <img
+                  src="/Logo.png"
+                  alt="logo"
+                  className="relative z-10 h-12 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="flex flex-col gap-8">
+            {servicesRight.map((service, index) => (
+              <ServiceCard
+                key={index}
+                title={service.title}
+                description={service.description}
+                image={service.image}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

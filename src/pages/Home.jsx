@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import { Testimonials } from "@/components/Testimonials";
+import InternshipProgramsPage from "@/components/InternshipPrograms";
 
 // Animation variant
 const fadeInUp = {
@@ -85,6 +86,21 @@ export default function Home() {
         >
           <Services />
         </motion.div>
+
+      <motion.div
+          id="services"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <InternshipProgramsPage/>
+        </motion.div>
+
+
+
+
+
 
         <motion.div
           id="resources"

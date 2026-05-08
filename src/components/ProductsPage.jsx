@@ -1,14 +1,14 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
-import { useScroll, useTransform, motion, useMotionValueEvent } from "framer-motion";
+
+import ProductCard from "./ProductCard";
 
 const products = [
   {
     id: 1,
-    name: "ASCEND.",
-    tagline: " Empowering Growth Through Smart Technology",                                                                                                   
+    name: "ASCEND",
+    tagline: "Empowering Growth Through Smart Technology",
     description:
-      "Scalable, intuitive platforms solving real-world education challenges, empowering teachers, learners, and institutions to grow.",   
+      "Empowering Growth Through Smart Technology Scalable, intuitive platforms solving real-world education challenges, empowering teachers, learners, and institutions to grow.",
     image: "/asend.png",
     link: "https://ascend.mentrictraining.com/",
   },
@@ -17,322 +17,111 @@ const products = [
     name: "Explenet",
     tagline: "Shaping the Future of Learning and Development",
     description:
-      "A smart platform for engaging students and enhancing remote learning experiences.",
+      "Shaping the Future of Learning and Development A smart platform for engaging students and enhancing remote learning experiences.",
     image: "/explenet.png",
     link: "https://explenet.mentrictraining.com/",
   },
 ];
 
 export default function ProductsPage() {
-  const scrollRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(-1); 
-
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-    offset: ["start start", "end end"],
-  });
-
-  useMotionValueEvent(scrollYProgress, "change", (v) => {
-    // if (v < 0.1) {
-    //   setActiveIndex(-1); 
-    // } else 
-    if (v >= 0.1 && v < 0.35) {
-      setActiveIndex(0); 
-    } else if (v >= 0.35) {
-      setActiveIndex(1); 
-    }
-  });
-  
-
-
-
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.35], [0, 1, 1, 0]);
-const scale = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.35], [0.8, 1, 1, 0.8]);
-const x = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.35], [-200, 0, 0, -200]);
-
-
-  const secondOpacity = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
-  const secondScale = useTransform(scrollYProgress, [0.4, 0.5], [0.8, 1]);
-  const secondX = useTransform(scrollYProgress, [0.4, 0.5], [-200, 0]);
-
   return (
-    <div className="bg-black text-white relative ">
-      {/* Header */}
-      <div className="text-center py-24 bg-black">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+    <section className="min-h-screen bg-[#050816] text-white px-6 py-10">
+      {/* Heading */}
+      <div className="text-center mb-20">
+        <h1 className="text-4xl md:text-6xl font-bold">
           Our{" "}
           <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
             Products
           </span>
         </h1>
-        <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-          Empowering your business through technology, design, and marketing.
+
+        <p className="text-gray-400 mt-5 text-lg max-w-2xl mx-auto">
+          Empowering your business through technology, design, and innovation.
         </p>
       </div>
 
-      {/* Scrollable container */}
-      <div ref={scrollRef} className="relative h-[400vh] mt-[-80px] ">
-        {/* Sticky container */}
-        <div className="sticky top-0 min-h-screen flex items-center justify-center">
-          {/* First Product */}
-          {activeIndex === 0 && (
-            <motion.div
-              style={{ opacity, scale, x, position: "absolute" }}
-              className="flex flex-col items-center justify-center text-center p-6 max-h-[90vh] overflow-y-auto"
-            >
-              <ProductCard product={products[0]} />
-            </motion.div>
-          )}
-
-          {/* Second Product */}
-          {activeIndex === 1 && (
-            <motion.div
-              style={{ opacity: secondOpacity, scale: secondScale, x: secondX, position: "absolute" }}
-              className="flex flex-col items-center justify-center text-center p-6 max-h-[90vh] overflow-y-auto"
-            >
-              <ProductCard2 product={products[1]} />
-            </motion.div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-
-
-// function ProductCard({ product, router }) {
-//   return (
-//     <div className="relative h-screen flex flex-col items-center justify-center text-center px-4 ">
-//       {/* Product Image */}
-//       <div className="absolute hidden lg:block top-1   bottom-[calc(50%-20px)] right-[calc(25%-100px)] w-[200px] h-[200px] rounded-full overflow-hidden  shadow-lg">
-//         <Image
-//           src={product.image}
-//           width={320}
-//           height={320}
-//           alt={`${product.name} Logo`}
-//           className="object-cover w-full h-full"
-//         />
-//       </div>
-
-   
-// <motion.h1
-//   className="text-5xl md:text-8xl font-light mb-6 tracking-tight flex justify-center z-10"
-//   initial="hidden"
-//   animate="visible"
-//   viewport={{ once: false, amount: 0.6 }}
-//   variants={{
-//     visible: {
-//       transition: {
-//         staggerChildren: 0.05,
-//         delayChildren: 0.2,
-//       },
-//     },
-//     hidden: {},
-//   }}
-// >
-//   {product.name.split("").map((letter, index) => (
-//     <motion.span
-//       key={index}
-//       className="inline-block text-shadow-lg text-gray-50 
-//  "
-//       variants={{
-//         hidden: { opacity: 0, scale: 0.5, y: 10 },
-//         visible: { opacity: 1, scale: 1, y: 0 },
-//       }}
-//       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-//     >
-//       {letter}
-//     </motion.span>
-//   ))}
-// </motion.h1>
-
-
-   
-//       <motion.p
-//         className="text-lg md:text-xl text-white mb-8 max-w-2xl leading-relaxed z-10"
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-//       >
-//         <span className="font-semibold">{product.tagline}</span>
-//         <br />
-//         {product.description}
-//       </motion.p>
-
-//       {/* CTA Button */}
-//       <motion.button
-//         onClick={() => router.push(product.link)}
-//         className="px-8 py-3 text-lg text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-full font-semibold shadow-md transition duration-300 z-10"
-//         initial={{ opacity: 0, y: 10 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-//       >
-//         Learn more →
-//       </motion.button>
-//     </div>
-//   );
-// }
-
-function ProductCard({ product }) {
-  return (
-    <div className="relative h-screen flex flex-col items-center justify-center text-center px-4">
-      {/* Product Image */}
-      <div className="absolute hidden lg:block top-1 bottom-[calc(50%-20px)] right-[calc(25%-100px)] w-[200px] h-[200px] rounded-full overflow-hidden shadow-lg">
-        <img
-          src={product.image}
-          width={320}
-          height={320}
-          alt={`${product.name} Logo`}
-          className="object-cover w-full h-full"
-        />
-      </div>
-
-      {/* Animated Product Name */}
-      <motion.h1
-        className="text-5xl md:text-8xl font-light mb-6 tracking-tight flex justify-center z-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.6 }}
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.05,
-              delayChildren: 0.2,
-            },
-          },
-          hidden: {},
-        }}
-      >
-        {product.name.split("").map((letter, index) => (
-          <motion.span
-            key={index}
-            className="inline-block text-shadow-lg text-gray-50"
-            variants={{
-              hidden: { opacity: 0, y: 40, scale: 0.8 },
-              visible: { opacity: 1, y: 0, scale: 1 },
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      {/* Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center max-w-6xl mx-auto">
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="group relative w-[400px] h-[400px] rounded-[30px] overflow-hidden border border-white/10 bg-gradient-to-b from-[#1a0033] via-[#0c1025] to-[#060816] shadow-[0_0_40px_rgba(168,85,247,0.25)] transition-all duration-500 hover:shadow-[0_0_80px_rgba(217,70,239,0.45)] hover:-translate-y-2"
           >
-            {letter}
-          </motion.span>
-        ))}
-      </motion.h1>
+            {/* Hover Gradient Overlay */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-br from-purple-600/20 via-fuchsia-500/10 to-pink-500/20 blur-2xl" />
 
-      {/* Tagline and Description */}
-      <motion.p
-        className="text-lg md:text-xl text-white mb-8 max-w-2xl leading-relaxed z-10"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.6 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-      >
-        <span className="font-semibold">{product.tagline}</span>
-        <br />
-        {product.description}
-      </motion.p>
+            {/* Animated Glow Top */}
+            <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 w-[180px] h-[80px] bg-purple-500 blur-3xl opacity-50 group-hover:opacity-90 transition-all duration-500" />
 
-      {/* CTA Button */}
-      <motion.button
-        onClick={() => (window.location.href = product.link)}
-        className="px-8 py-3 text-lg text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-full font-semibold shadow-md transition duration-300 z-10"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.6 }}
-        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-      >
-        Learn more →
-      </motion.button>
-    </div>
-  );
-}
+            {/* Animated Glow Bottom */}
+            <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 w-[180px] h-[80px] bg-fuchsia-500 blur-3xl opacity-50 group-hover:opacity-90 transition-all duration-500" />
 
+            {/* Border Glow */}
+            <div className="absolute inset-0 rounded-[30px] border border-purple-500/20 group-hover:border-fuchsia-400/40 transition-all duration-500" />
 
+            {/* Content */}
+            <div className="relative z-10 flex flex-col h-full p-8">
+              {/* Title */}
+    <h2 className="w-[135px] h-[39px] text-[32px] font-semibold leading-[100%] tracking-[0%] ">
+  {product.name}
+</h2>
 
+  {/* Description */}
+<p className="w-[350px] h-[119px] text-[16px] font-normal leading-[100%] tracking-[0%] text-gray-400 mt-8">
+  {product.description}
+</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function ProductCard2({ product }) {
-  return (
-    <div className="relative h-screen flex flex-col items-center justify-center text-center px-4 ">
-      {/* Product Image */}
-      <div className="absolute  bottom-79 right-[calc(13%-100px)]  w-[350px] h-[220px] shadow-lg hidden lg:block ">
-        <img
-          src={product.image}
-          width={420}
-          height={420}
-          alt={`${product.name} Logo`}
-          className="object-contain w-full  h-full"
-        />
-      </div>
-
-
-   
-<motion.h1
-  className="text-5xl md:text-8xl font-light mb-6 tracking-tight flex justify-center z-10"
-  initial="hidden"
-  animate="visible"
-  variants={{
-    visible: {
-      transition: {
-        staggerChildren: 0.05,
-        delayChildren: 0.2,
-      },
-    },
-    hidden: {},
-  }}
+              {/* Button */}
+<a
+  href={product.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 flex justify-center"
 >
-  {product.name.split("").map((letter, index) => (
-    <motion.span
-      key={index}
-      className="inline-block text-shadow-lg text-gray-50 
- "
-      variants={{
-        hidden: { opacity: 0, scale: 0.5, y: 10 },
-        visible: { opacity: 1, scale: 1, y: 0 },
-      }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-    >
-      {letter}
-    </motion.span>
-  ))}
-</motion.h1>
+  <button
+    className="
+      w-[242px]
+      h-[44px]
+      rounded-[30px]
+      p-[10px]
+      gap-[10px]
+      bg-gradient-to-r
+      from-purple-700
+      to-fuchsia-700
+      hover:scale-[1.02]
+      hover:shadow-[0_0_25px_rgba(217,70,239,0.5)]
+      transition-all
+      duration-300
+      text-white
+      text-[16px]
+      font-medium
+      flex
+      items-center
+      justify-center
+    "
+  >
+    Learn more
+  </button>
+</a>
 
+              {/* Spacer */}
+              <div className="flex-1" />
 
-   
-      <motion.p
-        className="text-lg md:text-xl text-white mb-8 max-w-2xl leading-relaxed z-10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-      >
-        <span className="font-semibold">{product.tagline}</span>
-        <br />
-        {product.description}
-      </motion.p>
+              {/* Logo */}
+              <div className="flex items-center justify-center mt-10">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="h-14 object-contain transition-all duration-500 group-hover:scale-110"
+                />
+              </div>
+            </div>
 
-      {/* CTA Button */}
-      <motion.button
-        onClick={() => (window.location.href = product.link)}
-        className="px-8 py-3 text-lg text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-full font-semibold shadow-md transition duration-300 z-10"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-      >
-        Learn more →
-      </motion.button>
-    </div>
+            {/* Extra Mouse Hover Shine */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent_60%)]" />
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
