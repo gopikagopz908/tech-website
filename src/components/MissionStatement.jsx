@@ -18,10 +18,10 @@ export default function MissionStatement() {
   });
 
   return (
-    <section ref={containerRef} className="h-[400vh] bg-black text-white px-6">
+    <section ref={containerRef} className="h-[400vh]  text-white bg-[#050816] px-6">
       {/* Sticky Sentence Area */}
       <div className="sticky top-0 h-screen flex items-center justify-center">
-        <div className="text-4xl md:text-5xl font-light italic text-center max-w-6xl leading-snug flex flex-wrap justify-center gap-3">
+        <div className="text-3xl md:text-4xl font-light italic text-center max-w-6xl leading-snug flex flex-wrap justify-center gap-3">
           {sentence.map((word, index) => {
             const total = sentence.length;
             const animationZone = 0.9; // Animate all words in 90% scroll

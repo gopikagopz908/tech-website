@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About Us", href: "#aboutus-cards" },
+ 
   { label: "Products", href: "#products" },
   { label: "services", href: "#services" },
+  {label:"internships",href:"/internships"},
   { label: "Resources", href: "#resources" },
   { label: "Career", href: "/career" },
   { label: "Contact us", href: "#footer" },
+  //  { label: "About Us", href: "#aboutus-cards" },
 ];
 
 export default function Navbar() {

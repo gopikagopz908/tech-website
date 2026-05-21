@@ -34,9 +34,21 @@ export function Testimonials() {
             Testimonials
           </span>
         </h1>
-        <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-          Empowering your business through technology, design, and marketing.
-        </p>
+       <p
+  className="
+    mt-4
+    max-w-2xl
+    mx-auto
+    text-center
+    font-['Roboto']
+    text-[18px]
+    font-normal
+    leading-[28px]
+    text-[#99A1AF]
+  "
+>
+  Empowering your business through technology, design, and marketing.
+</p>
       </div>
       <AnimatedTestimonials testimonials={testimonials} />
     </div>

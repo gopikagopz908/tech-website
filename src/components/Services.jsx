@@ -5,31 +5,31 @@ import { ServiceCard } from "./ServicesCard";
 
 const servicesLeft = [
   {
-    title: "Web Development",
+    title: "Web & App Development",
     description:
-      "Turning ideas into stunning, high-performing websites that work as hard as you do.",
-    image: "/wd2.jpg",
+      "Turning ideas into stunning, high-performing websites that work as hard as you do..",
+    image: "/r4.png",
   },
   {
-    title: "Internet of Things",
+    title: "Hardware Software Integration Services",
     description:
-      "We connect the unconnected—bridging the physical and digital worlds through smart innovation.",
-    image: "/iot1.jpg",
+      "Software to connect, monitor, and control hardware devices in real time.",
+    image: "/r1.png",
   },
 ];
 
 const servicesRight = [
   {
-    title: "App Development",
+    title: "Education & Skill Development Solutions",
     description:
-      "Your brand in every pocket—powerful, sleek apps designed for real-world impact.",
-    image: "/md2.jpg",
+      "Creating smart learning solutions that inspire, educate, and drive real progress.",
+    image: "/r2.png",
   },
   {
     title: "Digital Marketing",
     description:
-      "Not just clicks—real conversations, loyal customers, and results that speak for themselves.",
-    image: "/dm2.jpg",
+      "Data-driven marketing to grow your brand and reach the right audience.",
+    image: "/r3.png",
   },
 ];
 
@@ -239,16 +239,38 @@ const Services = () => {
 
         {/* Title */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold">
-            Our{" "}
-            <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Services
-            </span>
-          </h1>
+<h1
+  className="
+    text-center
+    font-['Roboto']
+    text-[60px]
+    font-bold
+    leading-[75px]
+    bg-gradient-to-r
+    from-[#C27AFF]
+    to-[#F6339A]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Our Services
+</h1>
 
-          <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-            Empowering your business through technology, design, and marketing.
-          </p>
+         <p
+  className="
+    mx-auto
+    mt-4
+    max-w-2xl
+    text-center
+    font-['Roboto']
+    text-[18px]
+    font-normal
+    leading-[29.25px]
+    text-[#D1D5DC]
+  "
+>
+  Empowering your business through technology, design, and marketing.
+</p>
         </div>
 
         {/* Layout */}

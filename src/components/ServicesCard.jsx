@@ -42,19 +42,7 @@ export function ServiceCard({
         </CardItem>
 
         {/* Description */}
-        <CardItem
-          as="p"
-          translateZ="60"
-          className="
-            mt-3
-            text-[14px]
-            leading-[22px]
-            text-gray-400
-            max-w-[320px]
-          "
-        >
-          {description}
-        </CardItem>
+       
 
         {/* Image */}
         <CardItem
@@ -78,6 +66,19 @@ export function ServiceCard({
               group-hover/card:shadow-[0_0_30px_rgba(217,70,239,0.3)]
             "
           />
+        </CardItem>
+         <CardItem
+          as="p"
+          translateZ="60"
+          className="
+            mt-3
+            text-[14px]
+            leading-[22px]
+            text-gray-400
+            max-w-[320px]
+          "
+        >
+          {description}
         </CardItem>
       </CardBody>
     </CardContainer>

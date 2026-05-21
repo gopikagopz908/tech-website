@@ -16,6 +16,9 @@ const fadeUp = {
 };
 
 
+
+
+
 const AboutusCards = () => {
   return (
     <div className="relative w-full overflow-hidden text-white">
@@ -40,15 +43,39 @@ const AboutusCards = () => {
           whileInView="visible"
           className="text-center max-w-4xl mx-auto"
         >
-    <h1 className="text-[60px] leading-[75px] font-bold font-['Roboto'] text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+    <h1
+  className="
+    text-center
+    font-['Roboto']
+    text-[60px]
+    leading-[75px]
+    font-bold
+    bg-[linear-gradient(90deg,#C27AFF_0%,#F6339A_100%)]
+    bg-clip-text
+    text-transparent
+  "
+>
   About Us
 </h1>
 
-<p className="mt-2 text-[#D1D5DC] text-[18px] leading-[29.25px] font-normal font-['Roboto'] text-center">
-  At Mentric Group, our endeavor is to provide holistic training and technology solutions – fundamental and
-  advanced technical skills, soft skills, job-oriented and upskilling training programs – in various sectors. We work
-  with organizations in assessing and improving various management processes using state-of-the-art
-  technology, resulting in efficient utilization of resources.
+<p
+  className="
+    mt-2
+    text-center
+    font-['Roboto']
+    text-[18px]
+    leading-[29.25px]
+    font-normal
+    text-[#D1D5DC]
+  "
+>
+  At Mentric Group, our endeavor is to provide holistic training
+  and technology solutions – fundamental and advanced technical
+  skills, soft skills, job-oriented and upskilling training
+  programs – in various sectors. We work with organizations in
+  assessing and improving various management processes using
+  state-of-the-art technology, resulting in efficient utilization
+  of resources.
 </p>
         </motion.div>
 
@@ -58,28 +85,43 @@ const AboutusCards = () => {
           {/* Image */}
           <motion.div variants={fadeUp}>
             <ThreeDCard
-              image="/ad.jpeg"
+              image="/ad.png"
               alt="Mentric Technologies"
             />
           </motion.div>
 
           {/* Content */}
           <motion.div variants={fadeUp} className="space-y-5">
-<h2 className="text-[40px] leading-[40px] font-bold font-['Roboto'] text-[#C27AFF]">
+<h2
+  className="
+    font-['Roboto']
+    text-[40px]
+    leading-[40px]
+    font-bold
+    text-[#C27AFF]
+  "
+>
   Mentric Technologies
 </h2>
-
-<p className="text-[#D1D5DC] text-[18px] leading-[28px] font-normal font-['Roboto']">
-Mentric Technologies builds scalable, high-impact digital 
-solutions—empowering modern 
-businesses through innovation, agility, and advanced technology.
+<p
+  className="
+    font-['Roboto']
+    text-[18px]
+    leading-[28px]
+    font-normal
+    text-[#D1D5DC]
+  "
+>
+  Mentric Technologies builds scalable, high-impact digital
+  solutions—empowering modern businesses through innovation,
+  agility, and advanced technology.
 </p>
 
             {/* Stats */}
-            <div className="flex gap-4 mt-6">
+     <div className="flex gap-4 mt-24">
               <CountCard value="50+" label="Trusted Clients" />
-              <CountCard value="120+" label="Projects Done" />
-             <CountCard value="10+" label="Years Experience" />
+              <CountCard value="30+" label=" Solutions Delivered" />
+             <CountCard value="10k+" label="Active Users" />
             </div>
           </motion.div>
         </div>
@@ -89,28 +131,97 @@ businesses through innovation, agility, and advanced technology.
 
           {/* Text */}
           <motion.div variants={fadeUp} className="space-y-5">
-            <h2 className="text-3xl font-semibold text-purple-400">
-              Mentric Training & Consulting
-            </h2>
+           <h2
+  className="
+    font-['Roboto']
+    text-[40px]
+    leading-[40px]
+    font-bold
+    text-[#C27AFF]
+  "
+>
+  Mentric Training & Consulting
+</h2>
 
-            <p className="text-gray-400">
-              We empower developers and technologists through hands-on training,
-              mentorship, and real-world project experience.
-            </p>
+           <p
+  className="
+    font-['Roboto']
+    text-[18px]
+    leading-[28px]
+    font-normal
+    text-[#D1D5DC]
+  "
+>
+  Our consulting division is committed to empowering the next
+  generation of developers, analysts, and technologists through
+  intensive, hands-on training programs.
+</p>
 
+<p
+  className="
+    font-['Roboto']
+    text-[16px]
+    leading-[24px]
+    font-normal
+    text-[#99A1AF]
+  "
+>
+  We offer mentorship, bootcamps, and real-world project
+  experience to bridge the gap between academic learning and
+  industry requirements.
+</p>
             {/* Stats */}
 
-         <div className="flex gap-4 mt-6">
-              <CountCard value="50+" label="Trusted Clients" />
-              <CountCard value="120+" label="Projects Done" />
-             <CountCard value="10+" label="Years Experience" />
+         <div className="flex gap-4 mt-12">
+              <CountCard value="100k+" label="Students" />
+              <CountCard value="500+" label="Training Programs" />
+             <CountCard value="10+" label="Expert Trainers" />
             </div>
 
 
             {/* Button */}
-            <button className="mt-4 px-5 py-2 border border-purple-500 rounded-md text-sm hover:bg-purple-600 transition">
-              Mentric Training & Consulting
-            </button>
+<div className="flex items-center gap-4 mt-12">
+  <p
+    className="
+      font-['Roboto']
+      text-[18px]
+      leading-[28px]
+      font-normal
+      text-white
+    "
+  >
+    Take a Look on
+  </p>
+
+  <button
+    className="
+      h-[44px]
+      px-6
+      rounded-[10px]
+      bg-white
+      border
+      border-[#9810FA]
+      flex
+      items-center
+      justify-center
+    "
+  >
+    <span
+      className="
+        font-['Roboto']
+        text-[18px]
+        leading-[28px]
+        font-medium
+        underline
+        bg-[linear-gradient(90deg,#9810FA_0%,#CD87FF_100%)]
+        bg-clip-text
+        text-transparent
+      "
+    >
+      Mentric Training & Consulting
+    </span>
+  </button>
+</div>
           </motion.div>
 
           {/* Image */}

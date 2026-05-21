@@ -1,31 +1,34 @@
-export default function InternshipProgramsPage() {
-  const internships = [
-    {
-      title: "College Internships",
-      icon: "🎓",
-      description:
-        "Designed for students who want practical exposure and real-world project experience while continuing academics.",
-    },
-    {
-      title: "Skill Development Internships",
-      icon: "🚀",
-      description:
-        "Focused on upgrading technical and professional skills through hands-on assignments and mentorship.",
-    },
-    {
-      title: "Final Year Project Internships",
-      icon: "📄",
-      description:
-        "Industry-oriented project internships for final-year students to build impactful academic projects.",
-    },
-    {
-      title: "Industry Exposure Internships",
-      icon: "💼",
-      description:
-        "Gain real-time industry exposure and learn workflows, collaboration, and enterprise practices.",
-    },
-  ];
 
+
+
+
+export default function InternshipProgramsPage() {
+const internships = [
+  {
+    title: "College Internships",
+    image: "/i1.svg",
+    description:
+      "Designed for students who want practical exposure and real-world project experience while continuing academics.",
+  },
+  {
+    title: "Skill Development Internships",
+    image: "/i2.svg",
+    description:
+      "Focused on upgrading technical and professional skills through hands-on assignments and mentorship.",
+  },
+  {
+    title: "Final Year Project Internships",
+    image: "/i3.svg",
+    description:
+      "Industry-oriented project internships for final-year students to build impactful academic projects.",
+  },
+  {
+    title: "Industry Exposure Internships",
+    image: "/i4.svg",
+    description:
+      "Gain real-time industry exposure and learn workflows, collaboration, and enterprise practices.",
+  },
+];
   return (
     <section className="min-h-screen bg-black text-white overflow-hidden relative px-6 py-16 md:px-20">
       {/* Background Glow */}
@@ -34,58 +37,114 @@ export default function InternshipProgramsPage() {
 
       {/* Heading */}
       <div className="text-center relative z-10">
-        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-fuchsia-500 to-purple-500 bg-clip-text text-transparent">
-          Internship Programs
-        </h1>
+       <h1
+  className="
+    text-center
+    font-['Roboto']
+    text-[60px]
+    font-bold
+    leading-[75px]
+    bg-gradient-to-r
+    from-[#C27AFF]
+    to-[#F6339A]
+    bg-clip-text
+    text-transparent
+  "
+>
+  Internship Programs
+</h1>
 
-        <p className="text-gray-400 mt-4 text-sm md:text-base">
-          Flexible Internship Opportunities for Every Stage of Learning
-        </p>
+       <p
+  className="
+    mt-4
+    text-center
+    font-['Roboto']
+    text-[18px]
+    font-normal
+    leading-[29.25px]
+    text-[#D1D5DC]
+  "
+>
+  Flexible Internship Opportunities for Every Stage of Learning
+</p>
       </div>
+                     <h2
+  className="
+    absolute
+    left-[75px]
+    top-[274px]
+    text-center
+    font-['Roboto']
+    text-[26px]
+    font-semibold
+    leading-[29.25px]
+    text-[#994BFF]
+  "
+>
+  Industry-Ready Internships
+</h2>
+          <p
+  className="
+    absolute
+    left-[75px]
+    top-[320px]
+    max-w-2xl
+    font-['Roboto']
+    text-[16px]
+    font-normal
+    leading-normal
+    text-white
+  "
+>
+  Mentric offers structured internship programs designed for students and
+  freshers seeking practical exposure, complete academic requirements, and
+  build industry-ready skills.
+</p>
+
+
 
       {/* Content Section */}
-      <div className="relative z-10 mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="relative z-10 mt-34 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div>
-          <h2 className="text-fuchsia-500 text-2xl font-semibold mb-6">
-            Industry-Ready Internships
-          </h2>
 
-          <p className="text-gray-300 leading-8 text-[15px] max-w-2xl">
-            Mentric offers structured internship programs designed for students and freshers seeking practical exposure, complete academic requirements, and build industry-ready skills.
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 mt-8 text-gray-200 text-[15px]">
-            <div className="flex items-start gap-3">
-              <span className="text-fuchsia-500">•</span>
-              <span>Hands-On Practical Skills</span>
-            </div>
+<div
+  className="
+    grid
+    grid-cols-1
+    md:grid-cols-2
+    gap-x-10
+    gap-y-4
+    mt-8
+  "
+>
+  {[
+    "Hands-On Practical Skills",
+    "Job-Ready Skill Building",
+    "Real-World Project Experience",
+    "Practical Industry Exposure",
+    "Industry-Level Skill Development",
+    "Technical Skill Development",
+  ].map((item, index) => (
+    <div key={index} className="flex items-start gap-3">
+      <span className="text-fuchsia-500 text-[18px]">•</span>
 
-            <div className="flex items-start gap-3">
-              <span className="text-fuchsia-500">•</span>
-              <span>Job-Ready Skill Building</span>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <span className="text-fuchsia-500">•</span>
-              <span>Real-World Project Experience</span>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <span className="text-fuchsia-500">•</span>
-              <span>Practical Industry Exposure</span>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <span className="text-fuchsia-500">•</span>
-              <span>Industry-Level Skill Development</span>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <span className="text-fuchsia-500">•</span>
-              <span>Technical Skill Enhancement</span>
-            </div>
-          </div>
+      <span
+        className="
+          whitespace-nowrap
+          text-white
+          font-['Roboto']
+          text-[18px]
+          font-semibold
+          leading-[24px]
+        "
+      >
+        {item}
+      </span>
+    </div>
+  ))}
+</div>
         </div>
 
         {/* Right Image */}
@@ -102,38 +161,93 @@ export default function InternshipProgramsPage() {
       </div>
 
       {/* Cards */}
-      <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {internships.map((item, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden rounded-[18px] border border-fuchsia-500/20 bg-gradient-to-b from-[#2b003d] via-[#1a0128] to-[#110018] p-6 shadow-[0_0_40px_rgba(217,70,239,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(217,70,239,0.35)]"
-          >
-            {/* Top Glow */}
-            <div className="absolute -top-10 left-1/2 h-24 w-32 -translate-x-1/2 rounded-full bg-fuchsia-500/30 blur-3xl" />
-
-            {/* Icon */}
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl shadow-lg">
-              {item.icon}
-            </div>
-
-            {/* Title */}
-            <h3 className="relative z-10 mt-6 text-xl font-semibold leading-snug text-white">
-              {item.title}
-            </h3>
-
-            {/* Description */}
-            <p className="relative z-10 mt-4 text-sm leading-7 text-gray-300">
-              {item.description}
-            </p>
-          </div>
-        ))}
+   <div className="relative z-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-18">
+  {internships.map((item, index) => (
+    <div
+      key={index}
+      className="
+        flex
+        w-[300px]
+        h-[260px]
+        flex-col
+        items-start
+        gap-[10px]
+        rounded-[20px]
+        bg-gradient-to-b
+        from-[#8606E0]
+        to-[#561C7F]
+        px-[20px]
+        pt-[19px]
+        pb-[33px]
+      "
+    >
+      {/* Icon */}
+      <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-7 h-7 object-contain"
+        />
       </div>
+
+      {/* Title */}
+      <h3
+        className="
+          mt-4
+          font-['Roboto']
+          text-[22px]
+          font-medium
+          leading-[29.25px]
+          text-white
+        "
+      >
+        {item.title}
+      </h3>
+
+      {/* Description */}
+      <p
+        className="
+          font-['Roboto']
+          text-[16px]
+          font-light
+          leading-[21px]
+          text-white
+        "
+      >
+        {item.description}
+      </p>
+    </div>
+  ))}
+</div>
 
       {/* Button */}
       <div className="relative z-10 mt-12 flex justify-center">
-        <button className="rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.35)]">
-          View More
-        </button>
+<button
+  className="
+    flex
+    h-[46px]
+    w-[174px]
+    items-center
+    justify-center
+    gap-[10px]
+    rounded-[20px]
+    bg-white
+    px-[5px]
+    py-[8px]
+    text-center
+    font-['Roboto']
+    text-[18px]
+    font-normal
+    leading-[29.25px]
+    text-[#9810FA]
+    transition-all
+    duration-300
+    hover:scale-105
+    hover:shadow-[0_0_30px_rgba(255,255,255,0.35)]
+  "
+>
+  View More
+</button>
       </div>
     </section>
   );

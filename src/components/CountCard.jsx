@@ -9,12 +9,31 @@ const CountCard = ({ value = "50+", label = "Trusted Clients" }) => {
       <div className="relative w-[144px] h-[130px] rounded-[13px] border border-[#E0E0E0]/20 bg-[#111118] shadow-[0_0_12px_rgba(255,255,255,0.15)] flex flex-col items-center justify-center backdrop-blur-md">
         
   
-        <h3 className="text-white text-[48px] leading-[20px] font-semibold font-['Roboto'] tracking-wide">
-          {value}
-        </h3>
+   <h3
+  className="
+    text-center
+    font-['Roboto']
+    text-[48px]
+    leading-[20px]
+    font-semibold
+    text-white
+  "
+>
+  {value}
+</h3>
 
       
-<p className="mt-4 text-white text-[16px] leading-[20px] font-semibold font-['Roboto'] text-center">
+<p
+  className="
+    mt-8
+    text-center
+    font-['Roboto']
+    text-[16px]
+    leading-[20px]
+    font-semibold
+    text-white
+  "
+>
   {label}
 </p>
 

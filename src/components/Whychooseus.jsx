@@ -34,16 +34,45 @@ const cardData = [
 const Whychooseus = () => {
   return (
     <div>
-      <div className="text-center  z-10 relative ">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          Why{" "}
-          <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Choose Us
-          </span>
-        </h1>
-        <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-          Empowering your business through technology, design, and marketing.
-        </p>
+      <div className="text-center mt-12 z-10 relative ">
+    <h1
+  className="
+    text-center
+    font-['Roboto']
+    text-[60px]
+    font-bold
+    leading-[75px]
+    text-white
+  "
+>
+  Why{" "}
+  <span
+    className="
+      bg-gradient-to-r
+      from-[#AD46FF]
+      to-[#F6339A]
+      bg-clip-text
+      text-transparent
+    "
+  >
+    Mentric Stands Out
+  </span>
+</h1>
+<p
+  className="
+    mx-auto
+    mt-4
+    max-w-2xl
+    text-center
+    font-['Roboto']
+    text-[18px]
+    font-normal
+    leading-[28px]
+    text-[#99A1AF]
+  "
+>
+  Empowering your business through technology, design, and marketing.
+</p>
       </div>
 
       <div className="flex flex-wrap gap-15 justify-center  px-4">

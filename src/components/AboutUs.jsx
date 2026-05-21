@@ -83,13 +83,40 @@ const AboutUs = () => {
           </div>
 
 
+<div className="max-w-[520px]">
+  <p className="font-inter text-[20px] font-normal leading-[31px] text-white">
+    We craft high-performance digital solutions that solve<br/>
+    real problems—helping your business{" "}
+    <span className="font-semibold text-[#FF00C7]">
+      grow faster
+    </span>{" "}
+    and{" "}
+    <span className="font-semibold text-[#FF00C7]">
+      smarter.
+    </span>
+  </p>
 
-          <p className="text-gray-300 text-sm sm:text-base md:text-2xl xl:text-xl leading-relaxed">
-          Transform Your Virtual Venture with Our Professional Digital Excellence and Expertise
-          </p>
-          <p className="text-gray-400 text-sm sm:text-base  md:text-2xl xl:text-lg">
-         Whether you're a nimble startup, a scaling mid-size firm, or a well-established enterprise, our solutions are tailored to meet your unique challenges and help to unlock new opportunities and break the shackles of limitation.
-          </p>
+  <div className="mt-10">
+    <button
+      className="
+        w-[242px]
+        h-[60px]
+        rounded-[30px]
+        bg-[linear-gradient(90deg,rgba(107,33,168,0.20)_0%,rgba(152,16,250,0.20)_100%)]
+        border border-[#7B2CBF]
+        text-white
+        text-[18px]
+        font-medium
+        backdrop-blur-md
+        transition-all
+        duration-300
+        hover:scale-[1.02]
+      "
+    >
+      Talk to Us
+    </button>
+  </div>
+</div>
         </motion.div>
 
         {/* 3D Model Viewer */}
