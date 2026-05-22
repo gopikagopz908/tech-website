@@ -85,6 +85,8 @@ export default function Footer() {
 
   return (
     <motion.footer
+                id="footer"
+
       className="relative bg-gradient-to-br from-black via-zinc-900 to-gray-900 text-white px-6 md:px-20 pt-16 pb-20"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -149,6 +151,7 @@ export default function Footer() {
       <AnimatePresence>
         {showForm && (
           <motion.div
+
             className="fixed inset-0 z-[9999] flex justify-end bg-black/60 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -85,8 +85,7 @@ export default function ScrollImageCards() {
   h-[385px]
   rounded-[40px]
   overflow-hidden
- background: rgba(217, 217, 217, 0.02);
-
+bg-[rgba(217,217,217,0.02)]
   backdrop-blur-[20px]
   border
   border-[rgba(255,255,255,0.08)]
@@ -101,8 +100,7 @@ export default function ScrollImageCards() {
 "
           >
             {/* Glow */}
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-500/20 to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
-
+<div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-purple-500/20 to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
             {/* Image */}
             <div className="p-4">
               <img
@@ -138,8 +136,9 @@ export default function ScrollImageCards() {
               </div>
 
               {/* Button */}
-          <div className="mt-auto flex justify-center">
-  <button
+<div className="relative z-10 mt-auto flex justify-center">  <button
+    type="button"
+
     onClick={() => navigate(card.link)}
     className="
       flex
@@ -175,8 +174,7 @@ export default function ScrollImageCards() {
             </div>
 
             {/* Shine */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_60%)]" />
-          </motion.div>
+<div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_60%)]" />          </motion.div>
         ))}
       </div>
     </section>

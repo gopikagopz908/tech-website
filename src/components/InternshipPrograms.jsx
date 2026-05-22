@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 
 
 
 
 export default function InternshipProgramsPage() {
+
+  const navigate = useNavigate();
+
 const internships = [
   {
     title: "College Internships",
@@ -37,13 +41,13 @@ const internships = [
 
       {/* Heading */}
       <div className="text-center relative z-10">
-       <h1
+<h1
   className="
     text-center
     font-['Roboto']
-    text-[60px]
+    text-[36px] sm:text-[60px]
     font-bold
-    leading-[75px]
+    leading-[48px] sm:leading-[75px]
     bg-gradient-to-r
     from-[#C27AFF]
     to-[#F6339A]
@@ -54,28 +58,32 @@ const internships = [
   Internship Programs
 </h1>
 
-       <p
+<p
   className="
     mt-4
+    px-4
     text-center
     font-['Roboto']
-    text-[18px]
+    text-[16px] sm:text-[18px]
     font-normal
-    leading-[29.25px]
+    leading-[24px] sm:leading-[29.25px]
     text-[#D1D5DC]
   "
 >
   Flexible Internship Opportunities for Every Stage of Learning
 </p>
       </div>
-                     <h2
+<h2
   className="
     absolute
-    left-[75px]
-    top-[274px]
+    left-1/2 sm:left-[75px]
+    -translate-x-1/2 sm:translate-x-0
+    top-[180px] sm:top-[274px]
+    w-full sm:w-auto
+    px-4 sm:px-0
     text-center
     font-['Roboto']
-    text-[26px]
+    text-[20px] sm:text-[26px]
     font-semibold
     leading-[29.25px]
     text-[#994BFF]
@@ -83,14 +91,17 @@ const internships = [
 >
   Industry-Ready Internships
 </h2>
-          <p
+<p
   className="
     absolute
-    left-[75px]
-    top-[320px]
-    max-w-2xl
+    left-1/2 sm:left-[75px]
+    -translate-x-1/2 sm:translate-x-0
+    top-[220px] sm:top-[320px]
+    w-[90%] sm:max-w-2xl
+    px-4 sm:px-0
+    text-center sm:text-left
     font-['Roboto']
-    text-[16px]
+    text-[14px] sm:text-[16px]
     font-normal
     leading-normal
     text-white
@@ -161,7 +172,7 @@ const internships = [
       </div>
 
       {/* Cards */}
-   <div className="relative z-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-18">
+<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-18  place-items-center">
   {internships.map((item, index) => (
     <div
       key={index}
@@ -223,6 +234,7 @@ const internships = [
       {/* Button */}
       <div className="relative z-10 mt-12 flex justify-center">
 <button
+  onClick={() => navigate("/internships")}
   className="
     flex
     h-[46px]

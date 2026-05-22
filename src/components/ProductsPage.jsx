@@ -19,7 +19,7 @@ const products = [
     description:
       "Shaping the Future of Learning and Development A smart platform for engaging students and enhancing remote learning experiences.",
     image: "/g.svg",
-    link: "https://explenet.mentrictraining.com/",
+    link: "https://explenet.com/",
   },
 ];
 

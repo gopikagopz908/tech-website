@@ -34,7 +34,7 @@ const cardData = [
 const Whychooseus = () => {
   return (
     <div>
-      <div className="text-center mt-12 z-10 relative ">
+      <div className="text-center mt-12 z-10 relative   ">
     <h1
   className="
     text-center
@@ -75,7 +75,7 @@ const Whychooseus = () => {
 </p>
       </div>
 
-      <div className="flex flex-wrap gap-15 justify-center  px-4">
+<div className="flex flex-wrap justify-center gap-2 sm:gap-0   md:gap-15 px-2">
         {cardData.map((card, index) => (
           <TitleCard key={index} {...card} />
         ))}

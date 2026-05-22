@@ -7,9 +7,9 @@ import { Crown } from "lucide-react";
 
 const TitleCard = ({ image, alt, count, label, icon, hoverDescription }) => {
   return (
-    <CardContainer className="inter-var">
+    <CardContainer className="inter-var ">
+      {" "}
       <CardBody className="bg-gradient-to-t from-[#111] to-transparent border border-gray-700 w-[360px] sm:w-[300px] p-0 rounded-2xl overflow-hidden group/card relative">
-        
         {/* Image */}
         <CardItem translateZ="100" className="w-full">
           <img
@@ -20,13 +20,20 @@ const TitleCard = ({ image, alt, count, label, icon, hoverDescription }) => {
         </CardItem>
 
         {/* Stats Section */}
-        <div className="absolute bottom-4 left-4 text-black z-10">
+        {/* Bottom Blur Overlay */}
+        <div className="absolute bottom-0 left-0 w-full h-[90px] bg-black/80 backdrop-blur-md z-10" />
+
+        {/* Stats Section */}
+        <div className="absolute bottom-4 left-4 z-20">
+          {" "}
           <h3 className="text-3xl font-semibold text-white">{count}</h3>
           <p className="text-sm font-bold text-white">{label}</p>
         </div>
 
         {/* Icon */}
-        <div className="absolute bottom-4 right-4 text-white bg-[#222] p-2 rounded-full z-10">
+        {/* Icon */}
+        <div className="absolute bottom-4 right-4 text-white bg-[#222] p-2 rounded-full z-20">
+          {" "}
           {icon || <Crown className="w-5 h-5 text-pink-500" />}
         </div>
 

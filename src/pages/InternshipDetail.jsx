@@ -303,6 +303,12 @@ mt-8 lg:mt-[-10px]"    >
     </p>
 
     <button
+    onClick={() =>
+    window.open(
+      "https://ascend.mentrictraining.com/",
+      "_blank"
+    )
+  }
       className="
         absolute right-[15px] bottom-[8px]
         flex items-center justify-center
@@ -345,6 +351,12 @@ mt-8 lg:mt-[-10px]"    >
     </p>
 
     <button
+    onClick={() =>
+    window.open(
+      "https://explenet.com/",
+      "_blank"
+    )
+  }
       className="
         absolute right-[15px] bottom-[8px]
         flex items-center justify-center
@@ -387,6 +399,12 @@ mt-8 lg:mt-[-10px]"    >
     </p>
 
     <button
+    onClick={() =>
+    window.open(
+      "https://supw.mentrictech.in/",
+      "_blank"
+    )
+  }
       className="
         absolute right-[15px] bottom-[8px]
         flex items-center justify-center
@@ -427,20 +445,22 @@ mt-8 lg:mt-[-10px]"    >
     <p className="text-gray-400 text-sm leading-6">
       Touch-free attendance with selfie verification and geo-tracking
     </p>
-
-    <button
-      className="
-        absolute right-[15px] bottom-[8px]
-        flex items-center justify-center
-        w-[75px] h-[30px]
-        rounded-[9px]
-        bg-[linear-gradient(90deg,#9810FA_0%,#F173FF_100%)]
-        shadow-[0_4px_4px_0_#000]
-        text-white text-[12px] font-medium
-      "
-    >
-      View
-    </button>
+<button
+  onClick={() => {
+    window.location.href = "https://timezapp.mentrictech.in/";
+  }}
+  className="
+    absolute right-[15px] bottom-[8px]
+    flex items-center justify-center
+    w-[75px] h-[30px]
+    rounded-[9px]
+    bg-[linear-gradient(90deg,#9810FA_0%,#F173FF_100%)]
+    shadow-[0_4px_4px_0_#000]
+    text-white text-[12px] font-medium
+  "
+>
+  View
+</button>
   </div>
 </div>
       </section>

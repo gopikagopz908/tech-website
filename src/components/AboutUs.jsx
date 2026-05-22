@@ -28,15 +28,13 @@ const AboutUs = () => {
 
       {/* Header */}
       <header className="absolute top-0 left-0 w-full z-20 py-4">
-        <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 max-w-screen-xl mx-auto">
-          {/* Logo */}
-          <img
+<div className="flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between px-4 sm:px-6 md:px-8 lg:px-16 max-w-screen-xl mx-auto">          <img
             src="/log.png"
             alt="Logo"
             width={140}
             height={50}
-            className="object-contain w-auto max-w-[100px] sm:max-w-[140px]"
-          />
+  className="object-contain w-auto max-w-[100px] sm:max-w-[140px] block mx-auto"
+         />
 
           {/* Navigation */}
           <NavMenu />
@@ -83,7 +81,7 @@ const AboutUs = () => {
           </div>
 
 
-<div className="max-w-[520px]">
+<div className="max-w-[520px] ">
   <p className="font-inter text-[20px] font-normal leading-[31px] text-white">
     We craft high-performance digital solutions that solve<br/>
     real problems—helping your business{" "}
@@ -95,27 +93,30 @@ const AboutUs = () => {
       smarter.
     </span>
   </p>
-
-  <div className="mt-10">
-    <button
-      className="
-        w-[242px]
-        h-[60px]
-        rounded-[30px]
-        bg-[linear-gradient(90deg,rgba(107,33,168,0.20)_0%,rgba(152,16,250,0.20)_100%)]
-        border border-[#7B2CBF]
-        text-white
-        text-[18px]
-        font-medium
-        backdrop-blur-md
-        transition-all
-        duration-300
-        hover:scale-[1.02]
-      "
-    >
-      Talk to Us
-    </button>
-  </div>
+<div className="mb-2 sm:mt-14"> <button
+  onClick={() => {
+    document.getElementById("footer")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+  className="
+    w-[242px]
+    h-[60px]
+    rounded-[30px]
+    bg-[linear-gradient(90deg,rgba(107,33,168,0.20)_0%,rgba(152,16,250,0.20)_100%)]
+    border border-[#7B2CBF]
+    text-white
+    text-[18px]
+    font-medium
+    backdrop-blur-md
+    transition-all
+    duration-300
+    hover:scale-[1.02]
+  "
+>
+  Talk to Us
+</button>
+</div>
 </div>
         </motion.div>
 
