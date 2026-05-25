@@ -229,7 +229,7 @@ const ConnectorRightBottom = () => (
 
 const Services = () => {
   return (
-    <section className="relative hidden lg:flex min-h-screen items-center justify-center overflow-hidden bg-[#050816] px-20 py-24 text-white">
+    <section className="relative hidden lg:flex min-h-screen items-center justify-center overflow-hidden bg-[#050816] px-20 py-24 text-white ">
       
       {/* Background Glow */}
       <div className="absolute top-[-100px] left-[-100px] h-[400px] w-[400px] rounded-full bg-purple-700/20 blur-3xl" />

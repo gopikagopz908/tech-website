@@ -18,7 +18,7 @@ export default function MissionStatement() {
   });
 
   return (
-    <section ref={containerRef} className="h-[400vh]  text-white bg-[#050816] px-6">
+    <section ref={containerRef} className="h-[400vh]  text-white c px-8">
       {/* Sticky Sentence Area */}
       <div className="sticky top-0 h-screen flex items-center justify-center">
         <div className="text-3xl md:text-4xl font-light italic text-center max-w-6xl leading-snug flex flex-wrap justify-center gap-3">

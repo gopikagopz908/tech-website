@@ -123,7 +123,6 @@ bg-[rgba(217,217,217,0.02)]
                 <h2
   className="
     text-[#BBB]
-    font-['Sora']
     text-[22px]
     font-normal
     leading-normal
@@ -162,7 +161,7 @@ bg-[rgba(217,217,217,0.02)]
     <span
       className="
         text-white
-        font-['Sora']
+        
         text-[18px]
         font-normal
         leading-normal

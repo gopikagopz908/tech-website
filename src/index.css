@@ -2,11 +2,13 @@
 @import "./app/globals.css";
 
 :root {
-  /* Used by `src/app/globals.css` body { font-family: var(--font-roboto) }. */
   --font-roboto: "Roboto";
 
-  /* Tailwind theme inline config references Geist variables; map them to sane defaults. */
   --font-geist-sans: "Roboto";
-  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
+body {
+  font-family: var(--font-roboto), sans-serif;
+}

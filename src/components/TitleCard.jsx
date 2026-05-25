@@ -32,10 +32,7 @@ const TitleCard = ({ image, alt, count, label, icon, hoverDescription }) => {
 
         {/* Icon */}
         {/* Icon */}
-        <div className="absolute bottom-4 right-4 text-white bg-[#222] p-2 rounded-full z-20">
-          {" "}
-          {icon || <Crown className="w-5 h-5 text-pink-500" />}
-        </div>
+  
 
         {/* Hover Description with Framer Motion */}
         <AnimatePresence>

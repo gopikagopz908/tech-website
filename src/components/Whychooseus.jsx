@@ -78,7 +78,7 @@ const Whychooseus = () => {
 </p>
       </div>
 
-<div className="flex flex-wrap justify-center gap-2 sm:gap-0   md:gap-15 px-2">
+<div className="flex flex-wrap justify-center gap-2 sm:gap-0 mt-16  md:gap-15 px-2">
         {cardData.map((card, index) => (
           <TitleCard key={index} {...card} />
         ))}

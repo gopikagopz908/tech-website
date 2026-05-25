@@ -28,7 +28,8 @@ export function Testimonials() {
   return (
     <div className="py-12 px-4 text-center">
             <div className="text-center z-10 relative ">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        <h1 className="    font-['Roboto']
+text-4xl md:text-6xl font-bold leading-tight">
           Client{" "}
           <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
             Testimonials

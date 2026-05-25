@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Internships", href: "/internships" },
   { label: "Resources", href: "/#resources" },
   { label: "Career", href: "/career" },
-  { label: "Contact us", href: "/#footer" },
+  // { label: "Contact us", href: "/#footer" },
 ];
 
 export default function Navbar() {
@@ -121,27 +121,26 @@ const handleNavigation = (href) => {
     {/* Contact Button - Desktop Only */}
 <button
   onClick={() => handleNavigation("/#footer")}
-  className="
-    hidden
-    lg:flex
-    relative
-    items-center
-    gap-2
-    px-5
-    py-2
-    rounded-full
-    border
-    border-[#C000FF]
-    text-white
-    text-sm
-    font-medium
-    whitespace-nowrap
-    shadow-[0_0_10px_rgba(192,0,255,0.6)]
-    transition-all
-    duration-300
-    hover:shadow-[0_0_18px_rgba(192,0,255,0.9)]
-  "
->
+className="
+  hidden
+  lg:flex
+  relative
+  items-center
+  gap-2
+  px-5
+  py-2
+  rounded-[30px]
+  border-t
+  border-t-[#9810FA]
+  bg-black
+  text-white
+  text-sm
+  font-medium
+  whitespace-nowrap
+  shadow-[0_4px_4px_0_#9810FA]
+  transition-all
+  duration-300
+">
   {/* Icon */}
   <div
     className="

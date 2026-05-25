@@ -10,7 +10,7 @@ const AboutUs = () => {
   return (
     <div className="relative h-full md:min-h-screen  bg-gradient-to-br from-black to-gray-900    text-white">
       {/* Waves Background */}
-      <div className="absolute inset-0 overflow-hidden z-0">
+      <div className="absolute inset-0 overflow-hidden z-0  " >
   <Waves
     backgroundColor="rgba(255, 255, 255, 0.05)"
     waveSpeedX={0.02}
@@ -22,6 +22,7 @@ const AboutUs = () => {
     maxCursorMove={120}
     xGap={10}
     yGap={36}
+    
   />
 </div>
 
@@ -82,7 +83,8 @@ const AboutUs = () => {
 
 
 <div className="max-w-[520px] ">
-  <p className="font-inter text-[20px] font-normal leading-[31px] text-white">
+  <p className="    font-['Roboto']
+ text-[20px] font-normal leading-[31px] text-white">
     We craft high-performance digital solutions that solve<br/>
     real problems—helping your business{" "}
     <span className="font-semibold text-[#FF00C7]">
@@ -117,6 +119,12 @@ const AboutUs = () => {
       sm:text-[18px]
       font-medium
       backdrop-blur-md
+   color: #FFF
+font-family: Roboto
+font-size: 20px
+font-style: normal
+font-weight: 400
+line-height: normal
       transition-all
       duration-300
       hover:scale-[1.02]
