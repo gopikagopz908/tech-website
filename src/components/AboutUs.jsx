@@ -99,20 +99,28 @@ const AboutUs = () => {
       behavior: "smooth",
     });
   }}
-  className="
-    w-[242px]
-    h-[60px]
-    rounded-[30px]
-    bg-[linear-gradient(90deg,rgba(107,33,168,0.20)_0%,rgba(152,16,250,0.20)_100%)]
-    border border-[#7B2CBF]
-    text-white
-    text-[18px]
-    font-medium
-    backdrop-blur-md
-    transition-all
-    duration-300
-    hover:scale-[1.02]
-  "
+ className="
+      w-[150px]
+      sm:w-[242px]
+      h-[42px]
+      sm:h-[60px]
+      px-3
+      sm:px-0
+      py-1
+      sm:py-0
+      rounded-[30px]
+      bg-[linear-gradient(90deg,rgba(107,33,168,0.20)_0%,rgba(152,16,250,0.20)_100%)]
+      border
+      border-[#7B2CBF]
+      text-white
+      text-[13px]
+      sm:text-[18px]
+      font-medium
+      backdrop-blur-md
+      transition-all
+      duration-300
+      hover:scale-[1.02]
+    "
 >
   Talk to Us
 </button>

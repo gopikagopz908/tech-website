@@ -29,12 +29,14 @@ export default function ProductsPage() {
       {/* Heading */}
       <div className="text-center mb-20">
 <h1
-  className="
+ className="
     text-center
     font-['Roboto']
-    text-[60px]
+    text-4xl
+    md:text-[60px]
     font-bold
-    leading-[75px]
+    leading-tight
+    md:leading-[75px]
     bg-gradient-to-r
     from-[#C27AFF]
     to-[#F6339A]

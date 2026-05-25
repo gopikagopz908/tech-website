@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -7,6 +8,10 @@ export default function InternshipProgramsPage() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
 const internships = [
   {
     title: "College Internships",
@@ -172,8 +177,7 @@ const internships = [
       </div>
 
       {/* Cards */}
-<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-18  place-items-center">
-  {internships.map((item, index) => (
+<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-18 place-items-center">  {internships.map((item, index) => (
     <div
       key={index}
       className="
@@ -231,36 +235,37 @@ const internships = [
   ))}
 </div>
 
-      {/* Button */}
+   
       <div className="relative z-10 mt-12 flex justify-center">
-<button
-  onClick={() => navigate("/internships")}
-  className="
-    flex
-    h-[46px]
-    w-[174px]
-    items-center
-    justify-center
-    gap-[10px]
-    rounded-[20px]
-    bg-white
-    px-[5px]
-    py-[8px]
-    text-center
-    font-['Roboto']
-    text-[18px]
-    font-normal
-    leading-[29.25px]
-    text-[#9810FA]
-    transition-all
-    duration-300
-    hover:scale-105
-    hover:shadow-[0_0_30px_rgba(255,255,255,0.35)]
-  "
->
-  View More
-</button>
-      </div>
+  <Link
+    to="/internships"
+    onClick={() => window.scrollTo(0, 0)}
+    className="
+      flex
+      h-[46px]
+      w-[174px]
+      items-center
+      justify-center
+      gap-[10px]
+      rounded-[20px]
+      bg-white
+      px-[5px]
+      py-[8px]
+      text-center
+      font-['Roboto']
+      text-[18px]
+      font-normal
+      leading-[29.25px]
+      text-[#9810FA]
+      transition-all
+      duration-300
+      hover:scale-105
+      hover:shadow-[0_0_30px_rgba(255,255,255,0.35)]
+    "
+  >
+    View More
+  </Link>
+</div>
     </section>
   );
 }

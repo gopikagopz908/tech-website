@@ -36,12 +36,15 @@ const Whychooseus = () => {
     <div>
       <div className="text-center mt-12 z-10 relative   ">
     <h1
+  
   className="
     text-center
     font-['Roboto']
-    text-[60px]
+    text-4xl
+    md:text-[60px]
     font-bold
-    leading-[75px]
+    leading-tight
+    md:leading-[75px]
     text-white
   "
 >

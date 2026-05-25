@@ -39,17 +39,19 @@ export default function ScrollImageCards() {
       {/* Heading */}
       <div className="text-center relative z-10 mb-20">
         <h1
-          className="
-            text-[60px]
-            font-bold
-            leading-[75px]
-            bg-gradient-to-r
-            from-[#C27AFF]
-            to-[#F6339A]
-            bg-clip-text
-            text-transparent
-          "
-        >
+       className="
+    text-4xl
+    md:text-[60px]
+    font-bold
+    leading-tight
+    md:leading-[75px]
+    bg-gradient-to-r
+    from-[#C27AFF]
+    to-[#F6339A]
+    bg-clip-text
+    text-transparent
+  "
+>
           Our Resources
         </h1>
 

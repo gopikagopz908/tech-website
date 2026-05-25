@@ -342,18 +342,20 @@ const AboutusCards = () => {
           {/* Content */}
           <motion.div variants={fadeUp} className="space-y-5">
 
-            <h2
-              className="
-                font-['Roboto']
-                text-[30px] sm:text-[40px]
-                leading-[34px] sm:leading-[40px]
-                font-bold
-                text-[#C27AFF]
-                text-center md:text-left
-              "
-            >
-              Mentric Technologies
-            </h2>
+   <h2
+  className="
+    mt-12
+    sm:mt-0
+    font-['Roboto']
+    text-[30px] sm:text-[40px]
+    leading-[34px] sm:leading-[40px]
+    font-bold
+    text-[#C27AFF]
+    text-center md:text-left
+  "
+>
+  Mentric Technologies
+</h2>
 
             <p
               className="
@@ -446,6 +448,7 @@ const AboutusCards = () => {
                   font-normal
                   text-white
                   text-center
+                  mt-2
                 "
               >
                 Take a Look on

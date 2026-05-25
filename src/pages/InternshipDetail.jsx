@@ -1,8 +1,13 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import NavMenu from "@/components/NavMenu";
+import { useEffect } from "react";
 
 export default function InternshipPrograms() {
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const internships = [
     {
       title: "College Internships",
@@ -664,17 +669,20 @@ mt-8 lg:mt-[-10px]"    >
         <div className="relative z-10 flex items-center justify-center gap-4 mb-14">
           <div className="h-[1px] w-16 bg-fuchsia-500"></div>
 
-          <h2
-            className="
+<h2
+  className="
     text-white
     font-['Roboto']
-    text-[32px]
+    text-[20px]
+    sm:text-[24px]
+    md:text-[32px]
     font-medium
     leading-normal
+    whitespace-nowrap
   "
-          >
-            Technologies we offer in internships
-          </h2>
+>
+  Technologies we offer in internships
+</h2>
 
           <div className="h-[1px] w-16 bg-fuchsia-500"></div>
         </div>

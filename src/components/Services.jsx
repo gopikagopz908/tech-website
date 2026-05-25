@@ -298,7 +298,6 @@ const Services = () => {
             <ConnectorRightTop />
             <ConnectorRightBottom />
 
-            {/* Hexagon */}
             <div className="relative z-20 flex items-center justify-center">
               <div className="absolute inset-0 bg-fuchsia-600/40 blur-3xl scale-110" />
 
@@ -333,6 +332,9 @@ const Services = () => {
               </div>
             </div>
           </div>
+
+
+
 
           {/* RIGHT */}
           <div className="flex flex-col gap-8">
