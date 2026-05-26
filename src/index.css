@@ -12,3 +12,13 @@
 body {
   font-family: var(--font-roboto), sans-serif;
 }
+
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.cursor-pointer {
+  cursor: pointer;
+}
