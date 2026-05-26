@@ -31,7 +31,31 @@ export default function ScrollImageCards() {
   const navigate = useNavigate();
 
   return (
-    <section className="relative overflow-hidden bg-black py-24 px-4">
+    <section className="relative overflow-hidden bg-black py-24 px">
+      {/* Background Image */}
+{/* Center Background Curve */}
+{/* Center Background Curve */}
+{/* Center Background Curve */}
+<div
+  className="
+    hidden md:block
+
+    absolute
+    left-1/2
+    top-[58%]
+    -translate-x-1/2
+    -translate-y-1/2
+    w-[1400px]
+    h-[500px]
+    bg-[url('/hlo.png')]
+    bg-contain
+    bg-center
+    bg-no-repeat
+    opacity-90
+    pointer-events-none
+    z-0
+  "
+/>
       {/* Background Glow */}
       <div className="absolute left-0 bottom-0 w-[500px] h-[300px] bg-fuchsia-600 blur-[140px] opacity-40 rounded-full" />
       <div className="absolute right-0 bottom-0 w-[500px] h-[300px] bg-purple-700 blur-[140px] opacity-40 rounded-full" />
@@ -69,8 +93,10 @@ export default function ScrollImageCards() {
         </p>
       </div>
 
+      
+
       {/* Cards */}
-      <div className="relative z-10 flex flex-wrap justify-center gap-10">
+      <div className="relative z-10 flex flex-wrap justify-center  gap-10">
         {cards.map((card, index) => (
           <motion.div
             key={index}
