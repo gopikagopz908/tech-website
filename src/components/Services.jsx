@@ -35,7 +35,7 @@ const servicesRight = [
 
 const ConnectorLeftTop = () => (
   <svg
-    className="absolute right-[110px] top-[-120px]"
+    className="absolute right-[40px] top-[-120px]"
     width="320"
     height="320"
     viewBox="0 0 320 320"
@@ -85,7 +85,7 @@ const ConnectorLeftTop = () => (
 
 const ConnectorLeftBottom = () => (
   <svg
-    className="absolute right-[110px] bottom-[-120px]"
+    className="absolute right-[40px] bottom-[-120px]"
     width="320"
     height="320"
     viewBox="0 0 320 320"
@@ -133,7 +133,7 @@ const ConnectorLeftBottom = () => (
 
 const ConnectorRightTop = () => (
   <svg
-    className="absolute left-[110px] top-[-120px]"
+    className="absolute left-[40px] top-[-120px]"
     width="320"
     height="320"
     viewBox="0 0 320 320"
@@ -181,7 +181,7 @@ const ConnectorRightTop = () => (
 
 const ConnectorRightBottom = () => (
   <svg
-    className="absolute left-[110px] bottom-[-120px]"
+    className="absolute left-[40px] bottom-[-120px]"
     width="320"
     height="320"
     viewBox="0 0 320 320"

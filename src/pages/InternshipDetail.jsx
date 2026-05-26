@@ -13,25 +13,23 @@ useEffect(() => {
       title: "College Internships",
       image: "/i1.svg",
       description:
-        "Designed for students who want practical exposure and real-world project experience while continuing academics.",
-    },
+        "Designed in collaboration with institutions to provide students with structured, curriculum-aligned practical training."},
     {
       title: "Skill Development Internships",
       image: "/i2.svg",
       description:
-        "Focused on upgrading technical and professional skills through hands-on assignments and mentorship.",
+        "Designed in collaboration with institutions to provide students with structured, curriculum-aligned practical training."
     },
     {
       title: "Final Year Project Internships",
       image: "/i3.svg",
       description:
-        "Industry-oriented project internships for final-year students to build impactful academic projects.",
-    },
+        "Focused support for academic projects with real-world implementation, mentorship, and technical guidance."},
     {
       title: "Industry Exposure Internships",
       image: "/i4.svg",
       description:
-        "Gain real-time industry exposure and learn workflows, collaboration, and enterprise practices.",
+        "Experience real work environments and understand industry processes."
     },
   ];
   return (
@@ -231,27 +229,30 @@ mt-8 lg:mt-[-10px]"    >
       </div>
 
       {/* Title */}
-      <h3
-        className="
-          mt-4
-          font-['Roboto']
-          text-[22px]
-          font-medium
-          leading-[29.25px]
-          text-white
-        "
-      >
-        {item.title}
-      </h3>
+<h3
+  className="
+    mt-4
+    min-h-[58px]
+    text-[22px]
+    font-medium
+    leading-[29.25px]
+    text-white
+  "
+>
+  {item.title}
+</h3>
 
       {/* Description */}
       <p
         className="
           font-['Roboto']
           text-[16px]
+            w-full
+    min-h-[84px]
           font-light
           leading-[21px]
           text-white
+          
         "
       >
         {item.description}
@@ -264,7 +265,7 @@ mt-8 lg:mt-[-10px]"    >
   <h2
     className="
       text-white
-      font-roboto
+      
       text-xl md:text-[26px]
       font-medium
       leading-normal
@@ -298,7 +299,8 @@ mt-8 lg:mt-[-10px]"    >
     "
   >
     <div className="flex items-center justify-between w-full">
-      <h3 className="text-white text-lg font-semibold">ASCEND</h3>
+      <h3 className="text-white text-lg font-semibold       font-['Roboto']
+">ASCEND</h3>
 
       <img src="/ASC.png" alt="logo" className="h-6 object-contain" />
     </div>
@@ -346,7 +348,8 @@ mt-8 lg:mt-[-10px]"    >
     "
   >
     <div className="flex items-center justify-between w-full">
-      <h3 className="text-white text-lg font-semibold">Explenet</h3>
+      <h3 className="text-white text-lg font-semibold       font-['Roboto']
+">Explenet</h3>
 
       <img src="/EXP.png" alt="logo" className="h-6 object-contain" />
     </div>
@@ -394,7 +397,8 @@ mt-8 lg:mt-[-10px]"    >
     "
   >
     <div className="flex items-center justify-between w-full">
-      <h3 className="text-white text-lg font-semibold">SUPW</h3>
+      <h3 className="text-white text-lg font-semibold       font-['Roboto']
+">SUPW</h3>
 
       <img src="/SUP.png" alt="logo" className="h-6 object-contain" />
     </div>
@@ -442,7 +446,7 @@ mt-8 lg:mt-[-10px]"    >
     "
   >
     <div className="flex items-center justify-between w-full">
-      <h3 className="text-white text-lg font-semibold">Timez App</h3>
+      <h3 className="text-white text-lg font-semibold ">Timez App</h3>
 
       <img src="/TIMEZ.png" alt="logo" className="h-6 object-contain" />
     </div>
@@ -622,20 +626,20 @@ mt-8 lg:mt-[-10px]"    >
 
             {/* Title */}
             <h3
-              className="
-                mt-4
-                text-center
-                font-['Roboto']
-                text-xl md:text-[26px]
-                font-medium
-                leading-normal
-                bg-[linear-gradient(180deg,#9810FA_0%,#C27AFF_100%)]
-                bg-clip-text
-                text-transparent
-              "
-            >
-              {step.title}
-            </h3>
+  className="
+    mt-4
+    text-center
+    text-[26px]
+    font-medium
+    leading-normal
+    not-italic
+    bg-[linear-gradient(180deg,#9810FA_0%,#C27AFF_100%)]
+    bg-clip-text
+    text-transparent
+  "
+>
+  {step.title}
+</h3>
 
             {/* Description */}
             <p
@@ -775,18 +779,19 @@ mt-8 lg:mt-[-10px]"    >
       </h3>
 
       {/* Description */}
-      <p
-        className="
-          mt-2
-          text-white
-          font-['Roboto']
-          text-sm md:text-[16px]
-          font-normal
-          leading-7
-        "
-      >
-        {item.desc}
-      </p>
+<p
+  className="
+    max-w-[260px]
+    text-white
+    text-[16px]
+    font-normal
+    leading-[29.25px]
+    tracking-[0px]
+    not-italic
+  "
+>
+  {item.desc}
+</p>
     </div>
   ))}
 </div>

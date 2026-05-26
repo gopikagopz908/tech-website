@@ -70,20 +70,21 @@ export default function ProductsPage() {
             key={product.id}
             className="group relative w-[400px] h-[400px] rounded-[30px] overflow-hidden border border-white/10 bg-gradient-to-b from-[#1a0033] via-[#0c1025] to-[#060816] shadow-[0_0_40px_rgba(168,85,247,0.25)] transition-all duration-500 hover:shadow-[0_0_80px_rgba(217,70,239,0.45)] hover:-translate-y-2"
           >
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-br from-purple-600/20 via-fuchsia-500/10 to-pink-500/20 blur-2xl" />
+            <div className="absolute inset-[-20px] opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-br from-purple-600/40 via-fuchsia-500/30 to-pink-500/40 blur-[70px]" />
 
-            <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 w-[180px] h-[80px] bg-purple-500 blur-3xl opacity-50 group-hover:opacity-90 transition-all duration-500" />
+<div className="absolute top-[-70px] left-1/2 -translate-x-1/2 w-[260px] h-[140px] bg-purple-500 blur-[90px] opacity-70 group-hover:opacity-100 transition-all duration-500" />
 
-            <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 w-[180px] h-[80px] bg-fuchsia-500 blur-3xl opacity-50 group-hover:opacity-90 transition-all duration-500" />
+<div className="absolute bottom-[-80px] left-1/2 -translate-x-1/2 w-[260px] h-[140px] bg-fuchsia-500 blur-[90px] opacity-70 group-hover:opacity-100 transition-all duration-500" />
 
-            <div className="absolute inset-0 rounded-[30px] border border-purple-500/20 group-hover:border-fuchsia-400/40 transition-all duration-500" />
+<div className="absolute inset-0 rounded-[30px] border border-purple-400/40 group-hover:border-fuchsia-400/80 transition-all duration-500 shadow-[0_0_80px_rgba(217,70,239,0.7)] group-hover:shadow-[0_0_140px_rgba(217,70,239,1)]" />
 
             <div className="relative z-10 flex flex-col h-full p-8">
-    <h2 className="w-[135px] h-[39px] text-[32px] font-semibold leading-[100%] tracking-[0%] ">
+    <h2 className="w-[135px]   h-[39px] text-[32px]           font-['Roboto']
+font-semibold leading-[100%] tracking-[0%] ">
   {product.name}
 </h2>
 
-<p className="w-[350px] h-[119px] text-[16px] font-normal leading-[100%] tracking-[0%] text-gray-400 mt-8">
+<p className="w-[350px] h-[119px] text-[16px] font-['Roboto'] leading-[100%] tracking-[0%] text-gray-400 mt-8">
   {product.description}
 </p>
 
@@ -106,6 +107,7 @@ export default function ProductsPage() {
     text-white
     text-[16px]
     font-medium
+    font-['Roboto']
     bg-gradient-to-r
     from-[rgba(107,33,168,0.20)]
     to-[rgba(152,16,250,0.20)]

@@ -7,6 +7,8 @@ import { X, Menu } from "lucide-react";
 const navLinks = [
   { label: "Products", href: "#products" },
   { label: "Services", href: "#services" },
+    { label: "Internships", href: "/internships" },
+
 
   { label: "Resources", href: "#resources" },
   { label: "Career", href: "career" },
@@ -142,7 +144,7 @@ export default function NavMenu() {
                 className="group w-full max-w-5xl px-10 py-8 text-right transition-colors duration-300 relative"
               >
                 {/* Animated Text Swap */}
-                <div className="relative inline-block w-full text-right overflow-hidden h-[48px]">
+                <div className="relative inline-block w-full text-right  h-[28px]">
                   {/* Normal Text */}
                   <motion.span
                     initial={false}

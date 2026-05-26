@@ -29,16 +29,18 @@ const AboutUs = () => {
 
       {/* Header */}
       <header className="absolute top-0 left-0 w-full z-20 py-4">
-<div className="flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between px-4 sm:px-6 md:px-8 lg:px-16 max-w-screen-xl mx-auto  ">          <img
+<div className="flex items-center justify-between w-full px-4 sm:px-6 md:px-8 lg:px-16">  <img
+
             src="/log.png"
             alt="Logo"
             width={140}
             height={50}
-  className="object-contain w-auto max-w-[100px] sm:max-w-[140px] block mx-auto ml-8"
+  className="object-contain w-auto max-w-[100px] sm:max-w-[140px] block mx-auto ml-16"
          />
 
-          {/* Navigation */}
-          <NavMenu />
+<div className="hidden lg:flex flex-1 justify-end">
+  <NavMenu />
+</div>
         </div>
       </header>
 
