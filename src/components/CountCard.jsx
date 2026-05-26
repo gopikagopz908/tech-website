@@ -1,14 +1,12 @@
 
 const CountCard = ({ value = "50+", label = "Trusted Clients" }) => {
   return (
-    <div className="group w-[176px] h-[160px] rounded-[26px] border border-[#9810FA] flex items-center justify-center relative bg-[#0B0B0F] overflow-hidden">
+    <div className="group w-[176px] h-[160px] rounded-[26px] border border-[#9810FA] flex items-center justify-center relative  ">
    
-      <div className="absolute inset-0 rounded-[26px] bg-purple-600 opacity-20 blur-xl group-hover:opacity-40 transition duration-300"></div>
+      <div className="absolute inset-0 rounded-[26px]  opacity-20 blur-xl group-hover:opacity-40 transition duration-300"></div>
 
      
-      <div className="relative w-[144px] h-[130px] rounded-[13px] border  bg-[#111118] shadow-[0_0_12px_rgba(255,255,255,0.15)] flex flex-col items-center justify-center backdrop-blur-md">
-        
-  
+<div className="relative w-[144px] h-[130px] rounded-[13px] border border-white/60 bg-transparent  flex flex-col items-center justify-center ">  
    <h3
   className="
     text-center

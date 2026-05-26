@@ -32,10 +32,6 @@ export default function ScrollImageCards() {
 
   return (
     <section className="relative overflow-hidden bg-black py-24 px">
-      {/* Background Image */}
-{/* Center Background Curve */}
-{/* Center Background Curve */}
-{/* Center Background Curve */}
 <div
   className="
     hidden md:block
