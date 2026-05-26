@@ -17,26 +17,22 @@ const internships = [
     title: "College Internships",
     image: "/i1.svg",
     description:
-      "Designed for students who want practical exposure and real-world project experience while continuing academics.",
-  },
+      "Designed in collaboration with institutions to provide students with structured, curriculum-aligned practical training."},
   {
     title: "Skill Development Internships",
     image: "/i2.svg",
     description:
-      "Focused on upgrading technical and professional skills through hands-on assignments and mentorship.",
-  },
+      "Gain hands-on industry experience through structured internship programs designed to build practical skills and career readiness."},
   {
     title: "Final Year Project Internships",
     image: "/i3.svg",
     description:
-      "Industry-oriented project internships for final-year students to build impactful academic projects.",
-  },
+      "Focused support for academic projects with real-world implementation, mentorship, and technical guidance."},
   {
     title: "Industry Exposure Internships",
     image: "/i4.svg",
     description:
-      "Gain real-time industry exposure and learn workflows, collaboration, and enterprise practices.",
-  },
+      "Experience real work environments and understand industry processes."},
 ];
   return (
     <section className="min-h-screen bg-black text-white overflow-hidden relative px-6 py-16 md:px-20">
@@ -197,8 +193,23 @@ const internships = [
       "
     >
       {/* Icon */}
-      <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg">
-        <img
+   <div
+  className="
+    relative
+    z-10
+    flex
+    h-12
+    w-12
+    min-h-12
+    min-w-12
+    items-center
+    justify-center
+    rounded-full
+    bg-white
+    shadow-lg
+    shrink-0
+  "
+>        <img
           src={item.image}
           alt={item.title}
           className="w-7 h-7 object-contain"
@@ -206,27 +217,30 @@ const internships = [
       </div>
 
       {/* Title */}
-      <h3
-        className="
-          mt-4
-          font-['Roboto']
-          text-[22px]
-          font-medium
-          leading-[29.25px]
-          text-white
-        "
-      >
-        {item.title}
-      </h3>
+     <h3
+  className="
+    mt-4
+    min-h-[56px]
+    text-[22px]
+    font-medium
+    leading-[29.25px]
+    text-white
+  "
+>
+  {item.title}
+</h3>
 
       {/* Description */}
-      <p
+        <p
         className="
           font-['Roboto']
           text-[16px]
+            w-full
+    min-h-[84px]
           font-light
           leading-[21px]
           text-white
+          
         "
       >
         {item.description}

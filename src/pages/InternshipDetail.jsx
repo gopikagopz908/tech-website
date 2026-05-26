@@ -18,8 +18,8 @@ useEffect(() => {
       title: "Skill Development Internships",
       image: "/i2.svg",
       description:
-        "Designed in collaboration with institutions to provide students with structured, curriculum-aligned practical training."
-    },
+      "Gain hands-on industry experience through structured internship programs designed to build practical skills and career readiness."},
+    
     {
       title: "Final Year Project Internships",
       image: "/i3.svg",
@@ -182,30 +182,27 @@ mt-8 lg:mt-[-10px]"    >
         {/* Cards */}
         {/* Cards Heading */}
        
-<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 place-items-center">
-  {internships.map((item, index) => (
+<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-18 place-items-center">  {internships.map((item, index) => (
     <div
       key={index}
       className="
-  flex
-  w-full
-  max-w-[300px]
-  h-[260px]
-  flex-col
-  justify-start
-  items-start
-  gap-[10px]
-  rounded-[20px]
-  overflow-hidden
-  bg-gradient-to-b
-  from-[#8606E0]
-  to-[#561C7F]
-  px-[20px]
-  pt-[19px]
-  pb-[33px]
-">
+        flex
+        w-[300px]
+        h-[260px]
+        flex-col
+        items-start
+        gap-[10px]
+        rounded-[20px]
+        bg-gradient-to-b
+        from-[#8606E0]
+        to-[#561C7F]
+        px-[20px]
+        pt-[19px]
+        pb-[33px]
+      "
+    >
       {/* Icon */}
-<div
+   <div
   className="
     relative
     z-10
@@ -229,10 +226,10 @@ mt-8 lg:mt-[-10px]"    >
       </div>
 
       {/* Title */}
-<h3
+     <h3
   className="
     mt-4
-    min-h-[58px]
+    min-h-[56px]
     text-[22px]
     font-medium
     leading-[29.25px]
@@ -243,7 +240,7 @@ mt-8 lg:mt-[-10px]"    >
 </h3>
 
       {/* Description */}
-      <p
+        <p
         className="
           font-['Roboto']
           text-[16px]
@@ -260,7 +257,6 @@ mt-8 lg:mt-[-10px]"    >
     </div>
   ))}
 </div>
-
    <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
   <h2
     className="
