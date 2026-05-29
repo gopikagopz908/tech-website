@@ -11,6 +11,7 @@ import BlogNotFound from "./pages/BlogNotFound.jsx";
 import CaseStudies from "./pages/CaseStudies.jsx";
 import CaseStudyDetail from "./pages/CaseStudyDetail.jsx";
 import InternshipPrograms from "./pages/InternshipDetail.jsx";
+import ScrollToTop from "./lib/path.jsx";
 
 function NotFound() {
   return <div className="min-h-screen flex items-center justify-center text-white bg-black">Not Found</div>;
@@ -18,6 +19,8 @@ function NotFound() {
 
 export default function App() {
   return (
+    <>
+    <ScrollToTop/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/career" element={<Career />} />
@@ -32,6 +35,7 @@ export default function App() {
       <Route path="*" element={<NotFound />} />
       <Route path="/404" element={<NotFound />} />
     </Routes>
+    </>
   );
 }
 

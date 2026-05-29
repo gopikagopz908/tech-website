@@ -8,10 +8,13 @@ export default function InternshipProgramsPage() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-  }, []);
+useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant",
+  });
+}, []);
 const internships = [
   {
     title: "College Internships",
@@ -253,7 +256,6 @@ const internships = [
       <div className="relative z-10 mt-12 flex justify-center">
   <Link
     to="/internships"
-    onClick={() => window.scrollTo(0, 0)}
     className="
       flex
       h-[46px]

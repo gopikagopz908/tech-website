@@ -208,10 +208,10 @@ const AboutusCards = () => {
                 Take a Look on
               </p>
 
-              <button
-                onClick={() => {
-                  window.location.href =
-                    "https://grey-gaur-599001.hostingersite.com/";
+             <button
+           
+                 onClick={() => {
+    window.open("https://mentrictraining.com/", "_blank", "noopener,noreferrer");
                 }}
                 className="
                   h-[44px]
