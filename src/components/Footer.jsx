@@ -52,7 +52,7 @@ const footerLinks = [
       { label: "Email:  ba@mentrictech.in", href: "mailto: ba@mentrictech.in" },
       {
         label:
-          "Address: Sri Venkateshwara Complex, 1st floor, Dasarahalli Main Road Near Karagadamma Temple, H.A.F, Post, Hebbal, Bengaluru, Karnataka 560024",
+          "Address: Sri Venkateshwara Complex, Dasarahalli Main Road, Hebbal, Bengaluru, Karnataka,560024",
         href: "https://maps.google.com/?q=Sri+Venkateshwara+Complex+Dasarahalli+Hebbal+Bengaluru",
       },
     ],
