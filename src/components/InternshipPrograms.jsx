@@ -169,7 +169,7 @@ const internships = [
 
           <img
             src="/intern.png"
-            alt="Internship"
+            alt="Internship program"
             className="relative z-10 w-[380px] object-contain drop-shadow-[0_0_50px_rgba(217,70,239,0.5)]"
           />
         </div>

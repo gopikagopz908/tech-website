@@ -170,7 +170,7 @@ mt-8 lg:mt-[-10px]"    >
 
    <img
   src="/intern.png"
-  alt="Internship"
+  alt="Internship program"
   className="relative z-10 w-full max-w-[2800px] object-contain"
 />
   </div>

@@ -284,6 +284,8 @@ const Services = () => {
                 title={service.title}
                 description={service.description}
                 image={service.image}
+                alt={service.title}
+
               />
             ))}
           </div>
