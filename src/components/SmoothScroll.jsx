@@ -29,6 +29,8 @@ export default function SmoothScroll({ children, onScroll }) {
 
     return () => {
       lenis.destroy();
+      lenis.scrollTo(0, { immediate: true });
+      window.scrollTo(0, 0);
     };
   }, [onScroll]);
 

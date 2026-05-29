@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Menu } from "lucide-react";
 
@@ -17,6 +17,7 @@ const navLinks = [
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const scrollYRef=useRef(0)
 
   useEffect(() => {
     const preventScroll = (e) => e.preventDefault();
