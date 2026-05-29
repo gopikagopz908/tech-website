@@ -30,7 +30,7 @@ const footerLinks = [
   {
     title: "Solutions",
     items: [
-      { label: "ASCEND", href: "https://ascend.mentrictraining.com/" },
+      { label: "Ascend", href: "https://ascend.mentrictraining.com/" },
       { label: "Explenet", href: "https://explenet.com/" },
       { label: "LMS - Platforms", href: "/" },
      
