@@ -11,6 +11,8 @@ const ThreeDCard = ({ image, alt }) => {
           <img
             src={image}
             alt={alt || "3D Image"}
+             loading="lazy"
+
             className="h-[440px] w-full object-cover rounded-2xl group-hover/card:shadow-2xl"
           />
         </CardItem>

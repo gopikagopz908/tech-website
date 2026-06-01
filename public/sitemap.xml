@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/career</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/internships</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/clients</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/products</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/caseStudies</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/caseStudies/explenet-experiential-learning</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/caseStudies/ascend-empowering-teachers</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/caseStudies/driving-school-exam-management</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/caseStudies/explenet</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tech-website-nine-bice.vercel.app/caseStudies/custom-erp-operations-maintenance</loc>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

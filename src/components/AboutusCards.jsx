@@ -252,6 +252,8 @@ const AboutusCards = () => {
             <ThreeDCard
               image="/training.jpg"
               alt="Training"
+                  loading="lazy"
+
             />
           </motion.div>
         </div>

@@ -13,6 +13,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import { Testimonials } from "@/components/Testimonials";
 import InternshipProgramsPage from "@/components/InternshipPrograms";
+import { Helmet } from "react-helmet-async";
 
 // Animation variant
 const fadeInUp = {
@@ -26,6 +27,20 @@ const fadeInUp = {
 
 export default function Home() {
   return (
+    <>
+     <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mentric Technologies",
+            "url": "https://tech-website-nine-bice.vercel.app",
+            "logo": "https://tech-website-nine-bice.vercel.app/log.png",
+            "description":
+              "Digital transformation, ERP solutions, EdTech platforms, internship programs and software development services."
+          })}
+        </script>
+      </Helmet>
     <SmoothScroll>
       <div className="min-h-screen w-full scroll-smooth bg-gradient-to-b from-black via-gray-900 to-black bg-red-600 text-white font-sans">
         {/* Sections with IDs */}
@@ -143,6 +158,7 @@ export default function Home() {
         </motion.div>
       </div>
     </SmoothScroll>
+    </>
   );
 }
 

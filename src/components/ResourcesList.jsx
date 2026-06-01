@@ -139,6 +139,8 @@ bg-[rgba(217,217,217,0.02)]
               <img
                 src={card.image}
                 alt={card.title}
+                loading="lazy"
+
                 className="
                   h-[150px]
                   w-full

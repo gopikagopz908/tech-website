@@ -1,5 +1,7 @@
 "use client";
 
+import { Helmet } from "react-helmet-async";
+
 const TeamMemberCard = ({ member }) => {
   return (
     <div
@@ -76,6 +78,37 @@ export default function Team() {
   ];
 
   return (
+<>
+    <Helmet>
+  <title>Leadership Team | Mentric Technologies</title>
+
+  <meta
+    name="description"
+    content="Meet the leadership team behind Mentric Technologies. Learn about our founders, directors, advisors, and industry experts driving innovation in technology, education, digital transformation, and business growth."
+  />
+
+  <meta
+    name="keywords"
+    content="Mentric Technologies team, leadership team, founders, directors, advisors, technology leaders, digital transformation experts"
+  />
+
+  <meta
+    property="og:title"
+    content="Leadership Team | Mentric Technologies"
+  />
+
+  <meta
+    property="og:description"
+    content="Meet the experienced leaders, advisors, and innovators who guide Mentric Technologies in delivering impactful technology and education solutions."
+  />
+
+  <meta property="og:type" content="website" />
+
+  <link
+    rel="canonical"
+    href="https://tech-website-nine-bice.vercel.app/team"
+  />
+</Helmet>
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -116,6 +149,7 @@ export default function Team() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

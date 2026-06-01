@@ -99,28 +99,35 @@ export default function Career() {
 
   return (
       <>
-    <Helmet>
-      <title>Careers | Exalogic</title>
+<Helmet>
+  <title>Careers | Mentric Technologies</title>
 
-      <meta
-        name="description"
-        content="Join Exalogic and build your career in software development, UI/UX design, digital innovation, and emerging technologies. Explore exciting opportunities and grow with us."
-      />
+  <meta
+    name="description"
+    content="Join Mentric Technologies and build your career in software development, UI/UX design, digital innovation, AI, ERP solutions, and emerging technologies. Explore exciting opportunities and grow with us."
+  />
 
-      <meta
-        name="keywords"
-        content="Exalogic careers, software jobs, React developer jobs, Node.js jobs, UI UX designer jobs, technology careers"
-      />
+  <meta
+    name="keywords"
+    content="Mentric Technologies careers, software jobs, React developer jobs, Node.js jobs, UI UX designer jobs, technology careers"
+  />
 
-      <meta property="og:title" content="Careers | Exalogic" />
+  <meta
+    property="og:title"
+    content="Careers | Mentric Technologies"
+  />
 
-      <meta
-        property="og:description"
-        content="Explore exciting career opportunities at Exalogic and become part of a team building innovative digital solutions."
-      />
+  <meta
+    property="og:description"
+    content="Explore exciting career opportunities at Mentric Technologies and become part of a team building innovative digital solutions."
+  />
 
-      <meta property="og:type" content="website" />
-    </Helmet>
+  <meta property="og:type" content="website" />
+   <link
+    rel="canonical"
+    href="https://tech-website-nine-bice.vercel.app/career"
+  />
+</Helmet>
 
     <section className="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 min-h-screen text-white py-20 px-6">
       <motion.div

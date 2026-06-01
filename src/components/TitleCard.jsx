@@ -15,6 +15,8 @@ const TitleCard = ({ image, alt, count, label, icon, hoverDescription }) => {
           <img
             src={image}
             alt={alt || "Card Image"}
+              loading="lazy"
+
             className="h-[440px] w-full object-cover rounded-2xl group-hover/card:shadow-2xl transition-all duration-300"
           />
         </CardItem>

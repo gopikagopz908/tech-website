@@ -27,17 +27,33 @@ const products = [
 export default function ProductsPage() {
   return (
     <>
-         <Helmet>
-        <title>Our Products | Exalogic</title>
-        <meta
-          name="description"
-          content="Explore Exalogic products including ASCEND and Explenet. Innovative platforms designed to enhance learning, development, and business growth through smart technology."
-        />
-        <meta
-          name="keywords"
-          content="ASCEND, Explenet, EdTech platform, learning management system, education technology, Exalogic products"
-        />
-      </Helmet>
+<Helmet>
+  <title>Our Products | Mentric Technologies</title>
+
+  <meta
+    name="description"
+    content="Explore Mentric Technologies products including ASCEND and Explenet. Innovative digital platforms designed to enhance learning, teacher development, experiential education, and organizational growth."
+  />
+
+  <meta
+    name="keywords"
+    content="ASCEND, Explenet, Mentric Technologies, experiential learning platform, teacher development platform, LMS, EdTech solutions, digital learning"
+  />
+
+  <meta
+    property="og:title"
+    content="Our Products | Mentric Technologies"
+  />
+
+  <meta
+    property="og:description"
+    content="Discover ASCEND and Explenet, innovative platforms from Mentric Technologies that empower educators, learners, institutions, and organizations."
+  />
+
+  <meta property="og:type" content="website" />
+
+ 
+</Helmet>
     <section className="min-h-screen bg-[#050816] text-white px-6 py-10 mt-12">
       {/* Heading */}
       <div className="text-center mb-20">
@@ -144,6 +160,8 @@ font-semibold leading-[100%] tracking-[0%] "
                   src={product.image}
                   alt={product.name}
                   className="h-8 object-contain transition-all duration-500 group-hover:scale-110"
+                    loading="lazy"
+
                 />
 
                 <h3 className="text-white text-[24px] font-semibold tracking-wide">

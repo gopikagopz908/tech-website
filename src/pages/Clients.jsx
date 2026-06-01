@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import { Helmet } from "react-helmet-async";
 
 const container = {
   hidden: { opacity: 0 },
@@ -104,6 +105,37 @@ const clients = [
 
 export default function Clients() {
   return (
+    <>
+  <Helmet>
+    <title>Our Clients | Mentric Technologies</title>
+
+    <meta
+      name="description"
+      content="Discover the organizations that trust Mentric Technologies. We partner with leading companies, educational institutions, and enterprises to deliver innovative digital transformation, training, ERP, and technology solutions."
+    />
+
+    <meta
+      name="keywords"
+      content="Mentric Technologies clients, Schneider Electric, Wonderla, NSDC, JLL, Sterling and Wilson, enterprise clients, technology solutions, digital transformation"
+    />
+
+    <meta
+      property="og:title"
+      content="Our Clients | Mentric Technologies"
+    />
+
+    <meta
+      property="og:description"
+      content="Explore the diverse organizations and industry leaders that collaborate with Mentric Technologies for technology, training, and digital innovation."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="canonical"
+      href="https://tech-website-nine-bice.vercel.app/clients"
+    />
+  </Helmet>
     <section className="bg-gray-950 min-h-screen text-white py-20 px-6">
       <motion.div
         className="max-w-6xl mx-auto"
@@ -142,6 +174,8 @@ export default function Clients() {
                 <img
                   src={client.src}
                   alt={client.name}
+                  loading="lazy"
+
                   className="h-12 object-contain"
                 />
               </div>
@@ -156,6 +190,7 @@ export default function Clients() {
         </motion.div>
       </motion.div>
     </section>
+    </>
   );
 }
 

@@ -15,30 +15,40 @@ export default function BlogDetail() {
 
   return (
     <>
-        <Helmet>
-      <title>{blog.title} | Exalogic Blog</title>
+ <Helmet>
+  <title>{blog.title} | Mentric Technologies</title>
 
-      <meta
-        name="description"
-        content={blog.content?.[0]?.text?.slice(0, 155)}
-      />
+  <meta
+    name="description"
+    content={
+      blog.content?.find(item => item.type === "paragraph")?.text?.slice(0, 160)
+    }
+  />
 
-      <meta
-        name="keywords"
-        content={`${blog.title}, Exalogic Blog, Technology, AI, Education, Digital Transformation`}
-      />
+  <meta
+    name="keywords"
+    content={`${blog.title}, Mentric Technologies, Case Study, Digital Transformation, Software Development, ERP Solutions, LMS Platform`}
+  />
 
-      <meta property="og:title" content={blog.title} />
+  <meta property="og:title" content={blog.title} />
 
-      <meta
-        property="og:description"
-        content={blog.content?.[0]?.text?.slice(0, 155)}
-      />
+  <meta
+    property="og:description"
+    content={
+      blog.content?.find(item => item.type === "paragraph")?.text?.slice(0, 160)
+    }
+  />
 
-      <meta property="og:image" content={blog.image} />
+  <meta property="og:image" content={blog.image} />
 
-      <meta property="og:type" content="article" />
-    </Helmet>
+  <meta property="og:type" content="article" />
+
+
+  <link
+    rel="canonical"
+    href="https://tech-website-nine-bice.vercel.app/blogs"
+  />
+</Helmet>
     <div className="min-h-screen bg-[#fefcfb] text-[#1f2937] px-4 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[3fr_1px_1fr] gap-8">
         {/* Main Blog Content */}
@@ -46,6 +56,8 @@ export default function BlogDetail() {
           <img
             src={blog.image}
             alt={blog.title}
+           loading="lazy"
+
             width={800}
             height={400}
             className="rounded-xl mb-8 border border-[#e5e7eb] shadow-sm object-cover"

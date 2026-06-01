@@ -2,10 +2,13 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { caseStudies } from "@/data/caseStudy";
+import { Helmet } from "react-helmet-async";
 
 export default function CaseStudyDetail() {
   const { slug } = useParams();
   const caseStudy = caseStudies.find((b) => b.slug === slug);
+  const description =
+  caseStudy.content?.find(item => item.type === "paragraph")?.text?.slice(0, 160) || "";
 
   if (!caseStudy) {
     return (
@@ -16,6 +19,43 @@ export default function CaseStudyDetail() {
   }
 
   return (
+
+    <>
+    <Helmet>
+  <title>{caseStudy.title} | Mentric Technologies</title>
+
+  <meta
+    name="description"
+    content={description}
+  />
+
+  <meta
+    name="keywords"
+    content={`${caseStudy.title}, Mentric Technologies, Case Study, Digital Transformation, Software Development, ERP Solutions, EdTech`}
+  />
+
+  <meta
+    property="og:title"
+    content={caseStudy.title}
+  />
+
+  <meta
+    property="og:description"
+    content={description}
+  />
+
+  <meta
+    property="og:image"
+    content={`https://tech-website-nine-bice.vercel.app${caseStudy.image}`}
+  />
+
+  <meta property="og:type" content="article" />
+
+  <link
+    rel="canonical"
+    href={`https://tech-website-nine-bice.vercel.app/caseStudies/${caseStudy.slug}`}
+  />
+</Helmet>
     <div className="min-h-screen bg-[#fefcfb] text-[#1f2937] px-4 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[3fr_1px_1fr] gap-8">
         {/* Main Case Study Content */}
@@ -23,6 +63,8 @@ export default function CaseStudyDetail() {
           <img
             src={caseStudy.image}
             alt={caseStudy.title}
+            loading="lazy"
+
             width={800}
             height={400}
             className="rounded-xl mb-8 border border-[#e5e7eb] shadow-sm object-cover"
@@ -123,6 +165,7 @@ export default function CaseStudyDetail() {
         </aside>
       </div>
     </div>
+    </>
   );
 }
 

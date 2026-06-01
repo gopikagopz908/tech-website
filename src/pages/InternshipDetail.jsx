@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import NavMenu from "@/components/NavMenu";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function InternshipPrograms() {
 
@@ -34,6 +35,37 @@ useEffect(() => {
   ];
   return (
     <>
+
+    <Helmet>
+  <title>Internship Programs | Mentric Technologies</title>
+
+  <meta
+    name="description"
+    content="Explore internship programs at Mentric Technologies. Gain hands-on experience in web development, AI, machine learning, mobile app development, cloud computing, data analytics, and embedded systems through real-world projects."
+  />
+
+  <meta
+    name="keywords"
+    content="internships, Mentric Technologies internships, software development internship, web development internship, AI internship, machine learning internship, cloud computing internship, student internships"
+  />
+
+  <meta
+    property="og:title"
+    content="Internship Programs | Mentric Technologies"
+  />
+
+  <meta
+    property="og:description"
+    content="Build practical skills through industry-focused internships, mentorship, and real-world project experience at Mentric Technologies."
+  />
+
+  <meta property="og:type" content="website" />
+
+  <link
+    rel="canonical"
+    href="https://tech-website-nine-bice.vercel.app/internships"
+  />
+</Helmet>
 <section className="min-h-screen bg-black text-white overflow-hidden relative px-4 sm:px-6 md:px-10 lg:px-20 py-10 md:py-16">        {/* Background Glow */}
         <div className="absolute top-20 right-32 w-72 h-72 bg-fuchsia-600/30 blur-[120px] rounded-full" />
         <div className="absolute bottom-10 left-10 w-60 h-60 bg-purple-700/20 blur-[120px] rounded-full" />
@@ -171,6 +203,8 @@ mt-8 lg:mt-[-10px]"    >
    <img
   src="/intern.png"
   alt="Internship program"
+  loading="lazy"
+
   className="relative z-10 w-full max-w-[2800px] object-contain"
 />
   </div>
@@ -916,6 +950,7 @@ mt-8 lg:mt-[-10px]"    >
       </div>
     </div>
   </div>
+  
 </section>
       <Footer/>
     </>
