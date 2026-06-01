@@ -21,10 +21,10 @@ const footerLinks = [
   {
     title: "Services",
     items: [
-      { label: "Custom Software Development", href: "/" },
-      { label: "Web & Mobile App Development", href: "/" },
-      { label: "Hardware software integral services", href: "/" },
-      { label: "Digital Marketing", href: "/" },
+      { label: "Custom Software Development"},
+      { label: "Web & Mobile App Development"},
+      { label: "Hardware software integral services"},
+      { label: "Digital Marketing" },
     ],
   },
   {
@@ -144,16 +144,22 @@ export default function Footer() {
 
       <ul className="space-y-2 text-gray-400">
         {section.items.map((item, idx) => (
-          <li key={idx}>
-            <a
-              href={item.href}
-              className="hover:text-white transition block"
-              target={item.href.startsWith("http") ? "_blank" : "_self"}
-              rel={item.href.startsWith("http") ? "noopener noreferrer" : ""}
-            >
-              {item.label}
-            </a>
-          </li>
+      <li key={idx}>
+  {item.href ? (
+    <a
+      href={item.href}
+      className="hover:text-white transition block"
+      target={item.href.startsWith("http") ? "_blank" : "_self"}
+      rel={item.href.startsWith("http") ? "noopener noreferrer" : ""}
+    >
+      {item.label}
+    </a>
+  ) : (
+    <span className="block text-gray-400">
+      {item.label}
+    </span>
+  )}
+</li>
         ))}
       </ul>
 
