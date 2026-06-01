@@ -1,5 +1,6 @@
 "use client";
 
+import { Helmet } from "react-helmet-async";
 import ProductCard from "./ProductCard";
 
 const products = [
@@ -25,6 +26,18 @@ const products = [
 
 export default function ProductsPage() {
   return (
+    <>
+         <Helmet>
+        <title>Our Products | Exalogic</title>
+        <meta
+          name="description"
+          content="Explore Exalogic products including ASCEND and Explenet. Innovative platforms designed to enhance learning, development, and business growth through smart technology."
+        />
+        <meta
+          name="keywords"
+          content="ASCEND, Explenet, EdTech platform, learning management system, education technology, Exalogic products"
+        />
+      </Helmet>
     <section className="min-h-screen bg-[#050816] text-white px-6 py-10 mt-12">
       {/* Heading */}
       <div className="text-center mb-20">
@@ -144,5 +157,6 @@ font-semibold leading-[100%] tracking-[0%] "
         ))}
       </div>
     </section>
+    </>
   );
 }

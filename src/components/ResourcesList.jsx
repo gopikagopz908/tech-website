@@ -1,6 +1,7 @@
 
 
 import * as motion from "motion/react-client";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
 const cards = [
@@ -31,6 +32,14 @@ export default function ScrollImageCards() {
   const navigate = useNavigate();
 
   return (
+    <>
+      <Helmet>
+        <title>Resources | Exalogic</title>
+        <meta
+          name="description"
+          content="Explore Exalogic resources including our team, blog articles, and case studies. Discover insights, expertise, and success stories from our digital transformation projects."
+        />
+      </Helmet>
     <section className="relative overflow-hidden bg-black py-24 px">
 <div
   className="
@@ -201,5 +210,6 @@ bg-[rgba(217,217,217,0.02)]
         ))}
       </div>
     </section>
+    </>
   );
 }

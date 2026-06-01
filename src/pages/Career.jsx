@@ -1,6 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const container = {
   hidden: { opacity: 0 },
@@ -97,6 +98,30 @@ export default function Career() {
   };
 
   return (
+      <>
+    <Helmet>
+      <title>Careers | Exalogic</title>
+
+      <meta
+        name="description"
+        content="Join Exalogic and build your career in software development, UI/UX design, digital innovation, and emerging technologies. Explore exciting opportunities and grow with us."
+      />
+
+      <meta
+        name="keywords"
+        content="Exalogic careers, software jobs, React developer jobs, Node.js jobs, UI UX designer jobs, technology careers"
+      />
+
+      <meta property="og:title" content="Careers | Exalogic" />
+
+      <meta
+        property="og:description"
+        content="Explore exciting career opportunities at Exalogic and become part of a team building innovative digital solutions."
+      />
+
+      <meta property="og:type" content="website" />
+    </Helmet>
+
     <section className="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 min-h-screen text-white py-20 px-6">
       <motion.div
         className="max-w-6xl mx-auto"
@@ -237,6 +262,7 @@ export default function Career() {
         </AnimatePresence>
       </motion.div>
     </section>
+    </>
   );
 }
 

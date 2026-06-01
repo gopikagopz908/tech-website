@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ServiceCard } from "./ServicesCard";
+import { Helmet } from "react-helmet-async";
 
 const servicesLeft = [
   {
@@ -229,6 +230,19 @@ const ConnectorRightBottom = () => (
 
 const Services = () => {
   return (
+    <>
+
+        <Helmet>
+        <title>Our Services | Exalogic</title>
+        <meta
+          name="description"
+          content="Exalogic provides web and mobile app development, hardware-software integration, education technology solutions, and digital marketing services to help businesses grow."
+        />
+        <meta
+          name="keywords"
+          content="web development, mobile app development, digital marketing, education technology, software integration, Exalogic services"
+        />
+      </Helmet>
     <section className="relative hidden lg:flex min-h-screen items-center justify-center overflow-hidden bg-[#050816] px-20 py-24 text-white ">
       
       {/* Background Glow */}
@@ -352,6 +366,7 @@ const Services = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

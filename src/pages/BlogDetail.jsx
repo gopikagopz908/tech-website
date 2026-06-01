@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { blogs } from "@/data/blogData";
 import BlogNotFound from "./BlogNotFound.jsx";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogDetail() {
   const { slug } = useParams();
@@ -13,6 +14,31 @@ export default function BlogDetail() {
   }
 
   return (
+    <>
+        <Helmet>
+      <title>{blog.title} | Exalogic Blog</title>
+
+      <meta
+        name="description"
+        content={blog.content?.[0]?.text?.slice(0, 155)}
+      />
+
+      <meta
+        name="keywords"
+        content={`${blog.title}, Exalogic Blog, Technology, AI, Education, Digital Transformation`}
+      />
+
+      <meta property="og:title" content={blog.title} />
+
+      <meta
+        property="og:description"
+        content={blog.content?.[0]?.text?.slice(0, 155)}
+      />
+
+      <meta property="og:image" content={blog.image} />
+
+      <meta property="og:type" content="article" />
+    </Helmet>
     <div className="min-h-screen bg-[#fefcfb] text-[#1f2937] px-4 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[3fr_1px_1fr] gap-8">
         {/* Main Blog Content */}
@@ -117,6 +143,7 @@ export default function BlogDetail() {
         </aside>
       </div>
     </div>
+    </>
   );
 }
 

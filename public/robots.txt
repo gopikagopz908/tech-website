@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tech-website-nine-bice.vercel.app/sitemap.xml
