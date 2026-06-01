@@ -253,77 +253,174 @@ export default function Footer() {
       </div>
 
       {/* Slide-in Form with Overlay */}
-      <AnimatePresence>
-        {showForm && (
-          <motion.div
+  <AnimatePresence>
+  {showForm && (
+    <motion.div
+      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      onClick={() => setShowForm(false)}
+    >
+      {/* Modal */}
+      <motion.div
+  className="
+    w-full
+    max-w-4xl
+    h-auto
+    max-h-[95vh]
+    overflow-y-auto
+    bg-zinc-950/95
+    backdrop-blur-xl
+    rounded-2xl
+    border
+    border-white/10
+    shadow-2xl
+    p-4
+    sm:p-6
+    md:p-8
+  "
 
-className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-sm"            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            onClick={() => setShowForm(false)} // close when clicking overlay
+        initial={{ y: 50, opacity: 0, scale: 0.95 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        exit={{ y: 50, opacity: 0, scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 120, damping: 20 }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close Button */}
+        <div className="flex justify-end mb-4">
+          <button
+            onClick={() => setShowForm(false)}
+            className="
+              flex items-center justify-center
+              w-10 h-10
+              rounded-full
+              bg-gradient-to-r
+              from-gray-500
+              to-purple-500
+              hover:from-gray-600
+              hover:to-purple-600
+              transition-all
+              duration-300
+              hover:scale-110
+              shadow-md
+            "
           >
-            {/* Slide-in Panel */}
-            <motion.div
-              className="md:w-1/2 w-full bg-zinc-950/95 backdrop-blur-xl p-6 shadow-2xl overflow-y-auto"
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 120, damping: 20 }}
-              onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
-            >
-              <button
-                onClick={() => setShowForm(false)}
-                className="flex items-center justify-center w-9 h-9 mb-4 rounded-full 
-                          bg-gradient-to-r from-gray-500 to-purple-500 
-                          hover:from-gray-600 hover:to-purple-600 
-                          transition transform hover:scale-110 shadow-md"
-              >
-                <X size={24} className="text-white" />
-              </button>
+            <X size={22} className="text-white" />
+          </button>
+        </div>
 
-              <h3 className="text-3xl font-semibold mb-6 tracking-tight">
-                Request a Quote
-              </h3>
+        {/* Heading */}
+        <div className="mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
+            Request a Quote
+          </h3>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="bg-zinc-800 p-4 rounded-md w-full text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                    required
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="bg-zinc-800 p-4 rounded-md w-full text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                    required
-                  />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Project Type (e.g. Website, App)"
-                  className="bg-zinc-800 p-4 rounded-md w-full text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                  required
-                />
-                <textarea
-                  placeholder="Tell us about your project..."
-                  rows={5}
-                  className="bg-zinc-800 p-4 rounded-md w-full text-white placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-white"
-                  required
-                ></textarea>
-                <button
-                  type="submit"
-                  className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition-all"
-                >
-                  Submit Quote Request
-                </button>
-              </form>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          <p className="text-gray-400 mt-2 text-sm sm:text-base">
+            Tell us about your project and we'll get back to you shortly.
+          </p>
+        </div>
+
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Name & Email */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="
+                bg-zinc-800
+                p-4
+                rounded-md
+                w-full
+                text-white
+                placeholder-gray-500
+                focus:outline-none
+                focus:ring-2
+                focus:ring-purple-500
+              "
+              required
+            />
+
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="
+                bg-zinc-800
+                p-4
+                rounded-md
+                w-full
+                text-white
+                placeholder-gray-500
+                focus:outline-none
+                focus:ring-2
+                focus:ring-purple-500
+              "
+              required
+            />
+          </div>
+
+          {/* Project Type */}
+          <input
+            type="text"
+            placeholder="Project Type (e.g. Website, Mobile App, ERP)"
+            className="
+              bg-zinc-800
+              p-4
+              rounded-md
+              w-full
+              text-white
+              placeholder-gray-500
+              focus:outline-none
+              focus:ring-2
+              focus:ring-purple-500
+            "
+            required
+          />
+
+          {/* Description */}
+          <textarea
+            placeholder="Tell us about your project..."
+            rows={6}
+            className="
+              bg-zinc-800
+              p-4
+              rounded-md
+              w-full
+              text-white
+              placeholder-gray-500
+              resize-none
+              focus:outline-none
+              focus:ring-2
+              focus:ring-purple-500
+            "
+            required
+          />
+
+          {/* Submit Button */}
+<div className="pt-4 sticky bottom-0 bg-zinc-950">            <button
+  type="submit"
+  className="
+    w-full
+    bg-white
+    text-black
+    px-6
+    py-3
+    rounded-full
+    font-medium
+    hover:bg-gray-200
+    transition-all
+  "
+>
+  Submit Quote Request
+</button>
+          </div>
+        </form>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
     </motion.footer>
   );
 }
