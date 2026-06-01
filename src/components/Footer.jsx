@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const footerLinks = [
   {
@@ -63,6 +64,10 @@ export default function Footer() {
   const [isInBottom, setIsInBottom] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [projectType, setProjectType] = useState("");
+const [description, setDescription] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,10 +97,36 @@ export default function Footer() {
     };
   }, [showForm]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submitted! (implement send logic)");
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    await emailjs.send(
+      "service_ankly86",
+      "template_ocv7el4",
+      {
+        name,
+        email,
+        project_type: projectType,
+        message: description,
+        time: new Date().toLocaleString(),
+      },
+      "TG7bPRYmYk082wRfz"
+    );
+
+    alert("Quote request submitted successfully!");
+
+    setName("");
+    setEmail("");
+    setProjectType("");
+    setDescription("");
+    setShowForm(false);
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    alert("Failed to send quote request.");
+  }
+};
+
 
   return (
     <motion.footer
@@ -328,6 +359,9 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
+                
+  value={name}
+  onChange={(e) => setName(e.target.value)}
               placeholder="Your Name"
               className="
                 bg-zinc-800
@@ -345,6 +379,8 @@ export default function Footer() {
 
             <input
               type="email"
+               value={email}
+  onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
               className="
                 bg-zinc-800
@@ -364,6 +400,8 @@ export default function Footer() {
           {/* Project Type */}
           <input
             type="text"
+              value={projectType}
+  onChange={(e) => setProjectType(e.target.value)}
             placeholder="Project Type (e.g. Website, Mobile App, ERP)"
             className="
               bg-zinc-800
@@ -382,6 +420,8 @@ export default function Footer() {
           {/* Description */}
           <textarea
             placeholder="Tell us about your project..."
+             value={description}
+  onChange={(e) => setDescription(e.target.value)}
             rows={6}
             className="
               bg-zinc-800
