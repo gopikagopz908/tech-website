@@ -37,12 +37,14 @@ const AboutusCards = () => {
 
         {/* Header */}
         <motion.div
+            id="aboutus"
+
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           className="text-center max-w-4xl mx-auto"
         >
-          <h1
+          <h1 
             className="
               text-center
               font-['Roboto']

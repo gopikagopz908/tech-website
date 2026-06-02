@@ -8,17 +8,16 @@ const products = [
     id: 1,
     name: "ASCEND",
     tagline: "Empowering Growth Through Smart Technology",
-    description:
-      "Empowering Growth Through Smart Technology Scalable, intuitive platforms solving real-world education challenges, empowering teachers, learners, and institutions to grow.",
-    image: "/asend.png",
+    description:"Competency Assessment & Development Platform.Assess capabilities, identify skill gaps, and drive continuous growth through personalized recommendations, competency mapping, and performance insights. Powered by AI-driven analytics, ASCEND supports effective learning, development, and workforce excellence.",
     link: "https://ascend.mentrictraining.com/",
+    image: "/asnd.png",
+
   },
   {
     id: 2,
     name: "Explenet",
     tagline: "Shaping the Future of Learning and Development",
-    description:
-      "Shaping the Future of Learning and Development A smart platform for engaging students and enhancing remote learning experiences.",
+    description:"Experiential Learning & Practical Skills Development Platform.Enable hands-on learning through practical labs, real-world projects, simulations, assessments, and interactive learning experiences. Explenet bridges the gap between theory and practice, helping learners build industry-ready skills and competencies",
     image: "/g.svg",
     link: "https://explenet.com/",
   },

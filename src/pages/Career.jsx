@@ -1,4 +1,5 @@
 "use client";
+import Navbar from "@/components/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -26,29 +27,29 @@ const modalVariants = {
   exit: { opacity: 0, scale: 0.95, transition: { duration: 0.2 } },
 };
 
-const jobs = [
-  {
-    title: "Frontend Developer (React.js)",
-    location: "Remote",
-    type: "Full-Time",
-    description:
-      "Build responsive user interfaces with React and collaborate with designers and backend developers.",
-  },
-  {
-    title: "Backend Developer (Node.js)",
-    location: "Bangalore",
-    type: "Full-Time",
-    description:
-      "Develop and maintain scalable backend services using Node.js, Express, and MongoDB.",
-  },
-  {
-    title: "UI/UX Designer",
-    location: "Remote",
-    type: "Contract",
-    description:
-      "Design intuitive user experiences and collaborate closely with product and engineering teams.",
-  },
-];
+// const jobs = [
+//   {
+//     title: "Frontend Developer (React.js)",
+//     location: "Remote",
+//     type: "Full-Time",
+//     description:
+//       "Build responsive user interfaces with React and collaborate with designers and backend developers.",
+//   },
+//   {
+//     title: "Backend Developer (Node.js)",
+//     location: "Bangalore",
+//     type: "Full-Time",
+//     description:
+//       "Develop and maintain scalable backend services using Node.js, Express, and MongoDB.",
+//   },
+//   {
+//     title: "UI/UX Designer",
+//     location: "Remote",
+//     type: "Contract",
+//     description:
+//       "Design intuitive user experiences and collaborate closely with product and engineering teams.",
+//   },
+// ];
 
 export default function Career() {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -99,6 +100,7 @@ export default function Career() {
 
   return (
       <>
+      <Navbar/>
 <Helmet>
   <title>Careers | Mentric Technologies</title>
 
@@ -142,28 +144,22 @@ export default function Career() {
         >
           🚀 Build Your Career with Us
         </motion.h1>
+<motion.div
+  variants={fadeUp}
+>
+  <div className="flex flex-col items-center justify-center ">
 
-        <motion.div className="space-y-6" variants={container}>
-          {jobs.map((job, i) => (
-            <motion.div
-              key={i}
-              className="bg-slate-800 border border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300"
-              variants={fadeUp}
-            >
-              <h3 className="text-2xl font-semibold mb-2 text-white">
-                {job.title}
-              </h3>
-              <p className="text-gray-400 text-sm mb-1">📍 {job.location}</p>
-              <p className="text-gray-400 text-sm mb-4">💼 {job.type}</p>
-              <button
-                onClick={() => setSelectedJob(job)}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full hover:from-blue-600 hover:to-purple-600 transition"
-              >
-                Apply Now
-              </button>
-            </motion.div>
-          ))}
-        </motion.div>
+    <h2 className="text-3xl md:text-4xl font-bold text-white mt-22">
+      Currently No Openings
+    </h2>
+
+    <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-2">
+      We don't have any active job openings at the moment.
+      Please check back later for future career opportunities at
+      Mentric Technologies.
+    </p>
+  </div>
+</motion.div>
 
         <AnimatePresence>
           {selectedJob && (

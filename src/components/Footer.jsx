@@ -8,7 +8,7 @@ const footerLinks = [
   {
     title: "Company",
     items: [
-      { label: "About  Us", href: "/#aboutus-cards" },
+      { label: "About  Us", href: "/#aboutus" },
       { label: "Products", href: "/#products" },
 
       { label: "Services", href: "/#services" },
