@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { caseStudies } from "@/data/caseStudy";
 import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
 
 export default function CaseStudyDetail() {
   const { slug } = useParams();
@@ -56,7 +57,9 @@ export default function CaseStudyDetail() {
     href={`https://tech-website-nine-bice.vercel.app/caseStudies/${caseStudy.slug}`}
   />
 </Helmet>
-    <div className="min-h-screen bg-[#fefcfb] text-[#1f2937] px-4 py-16">
+       <Navbar/>
+
+    <div className="min-h-screen bg-[#090D17] text-white px-4 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[3fr_1px_1fr] gap-8">
         {/* Main Case Study Content */}
         <div className="col-span-1">
@@ -70,15 +73,23 @@ export default function CaseStudyDetail() {
             className="rounded-xl mb-8 border border-[#e5e7eb] shadow-sm object-cover"
           />
 
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-[#111827] leading-tight">
+          <h1 className="
+    text-[35px]
+    font-bold
+    leading-[40px]
+    font-['Roboto']
+    mb-3
+    bg-[linear-gradient(90deg,#C27AFF_0%,#F6339A_100%)]
+    bg-clip-text
+    text-transparent">
             {caseStudy.title}
           </h1>
 
           {/* Author & Date */}
-          <div className="mb-8 text-sm text-[#6b7280] flex items-center gap-4">
+          <div className="mb-8 text-sm text-white flex items-center gap-4">
             <span>
               By{" "}
-              <span className="font-medium text-[#374151]">
+              <span className="font-medium text-white">
                 {caseStudy.author}
               </span>
             </span>
@@ -86,7 +97,7 @@ export default function CaseStudyDetail() {
             <span>{caseStudy.date}</span>
           </div>
 
-          <div className="space-y-6 text-[17px] leading-relaxed text-[#374151]">
+          <div className="space-y-6 text-[17px] leading-relaxed text-white">
             {caseStudy.content.map((block, index) => {
               switch (block.type) {
                 case "paragraph":
@@ -109,10 +120,10 @@ export default function CaseStudyDetail() {
                     <ul key={index} className="space-y-3 mt-3">
                       {block.items.map((item, i) => (
                         <li key={i}>
-                          <p className="text-[17px] font-semibold text-[#1f2937] mb-1">
+                          <p className="text-[17px] font-semibold text-white mb-1">
                             {item.title}
                           </p>
-                          <p className="text-[#4b5563]">{item.description}</p>
+                          <p className="text-white">{item.description}</p>
                         </li>
                       ))}
                     </ul>
@@ -121,7 +132,7 @@ export default function CaseStudyDetail() {
                   return (
                     <ul
                       key={index}
-                      className="list-disc list-inside space-y-2 pl-4 text-[#4b5563]"
+                      className="list-disc list-inside space-y-2 pl-4 text-white"
                     >
                       {block.items.map((item, i) => (
                         <li key={i}>{item}</li>

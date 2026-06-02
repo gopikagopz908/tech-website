@@ -136,6 +136,7 @@ export default function Clients() {
       href="https://tech-website-nine-bice.vercel.app/clients"
     />
   </Helmet>
+  <Navbar/>
     <section className="bg-gray-950 min-h-screen text-white py-20 px-6">
       <motion.div
         className="max-w-6xl mx-auto"

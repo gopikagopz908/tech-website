@@ -861,6 +861,12 @@ mt-8 lg:mt-[-10px]"    >
         </h2>
 
         <button
+            onClick={() => {
+      window.open(
+        "https://wa.me/918904806519?text=Hi%20Mentric%20Team.",
+        "_blank"
+      );
+    }}
           className="
             mt-4
             flex

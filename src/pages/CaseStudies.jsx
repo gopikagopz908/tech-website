@@ -23,7 +23,12 @@ const fadeUp = {
 
 export default function CaseStudies() {
   return (
+    <>
+           <Navbar/>
+
     <section className="bg-gray-950 min-h-screen text-white py-20 px-6">
+     
+      
       <motion.div
         className="max-w-6xl mx-auto"
         variants={container}
@@ -78,6 +83,8 @@ export default function CaseStudies() {
         </motion.div>
       </motion.div>
     </section>
+           </>
+
   );
 }
 

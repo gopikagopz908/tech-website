@@ -1,5 +1,6 @@
 "use client";
 
+import Navbar from "@/components/Navbar";
 import { Helmet } from "react-helmet-async";
 
 const TeamMemberCard = ({ member }) => {
@@ -109,6 +110,7 @@ export default function Team() {
     href="https://tech-website-nine-bice.vercel.app/team"
   />
 </Helmet>
+  <Navbar/>
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">

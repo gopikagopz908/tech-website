@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { blogs } from "@/data/blogData";
 import BlogNotFound from "./BlogNotFound.jsx";
 import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar.jsx";
 
 export default function BlogDetail() {
   const { slug } = useParams();
@@ -49,9 +50,12 @@ export default function BlogDetail() {
     href="https://tech-website-nine-bice.vercel.app/blogs"
   />
 </Helmet>
-    <div className="min-h-screen bg-[#fefcfb] text-[#1f2937] px-4 py-16">
+<Navbar/>
+<div className="min-h-screen bg-[#090D17] text-[#1f2937] px-4 py-16">
+   
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[3fr_1px_1fr] gap-8">
-        {/* Main Blog Content */}
+        {/* Main Blog Content */} 
+        
         <div className="col-span-1">
           <img
             src={blog.image}
@@ -62,21 +66,32 @@ export default function BlogDetail() {
             height={400}
             className="rounded-xl mb-8 border border-[#e5e7eb] shadow-sm object-cover"
           />
-
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-[#111827] leading-tight">
-            {blog.title}
-          </h1>
+<h1
+  className="
+    text-[35px]
+    font-bold
+    leading-[40px]
+    font-['Roboto']
+    mb-3
+    bg-[linear-gradient(90deg,#C27AFF_0%,#F6339A_100%)]
+    bg-clip-text
+    text-transparent
+    
+  "
+>
+  {blog.title}
+</h1>
 
           {/* Author & Date */}
-          <div className="mb-8 text-sm text-[#6b7280] flex items-center gap-4">
+          <div className="mb-8 text-sm text-white flex items-center gap-4">
             <span>
-              By <span className="font-medium text-[#374151]">{blog.author}</span>
+              By <span className="font-medium text-white">{blog.author}</span>
             </span>
             <span className="text-[#d1d5db]">|</span>
             <span>{blog.date}</span>
           </div>
 
-          <div className="space-y-6 text-[17px] leading-relaxed text-[#374151]">
+          <div className="space-y-6 text-[17px] leading-relaxed text-white">
             {blog.content.map((block, index) => {
               switch (block.type) {
                 case "paragraph":
@@ -99,10 +114,10 @@ export default function BlogDetail() {
                     <ul key={index} className="space-y-3 mt-3">
                       {block.items.map((item, i) => (
                         <li key={i}>
-                          <p className="text-[17px] font-semibold text-[#1f2937] mb-1">
+                          <p className="text-[17px] font-semibold text-white mb-1">
                             {item.title}
                           </p>
-                          <p className="text-[#4b5563]">{item.description}</p>
+                          <p className="text-white">{item.description}</p>
                         </li>
                       ))}
                     </ul>
@@ -111,7 +126,7 @@ export default function BlogDetail() {
                   return (
                     <ul
                       key={index}
-                      className="list-disc list-inside space-y-2 pl-4 text-[#4b5563]"
+                      className="list-disc list-inside space-y-2 pl-4 text-white"
                     >
                       {block.items.map((item, i) => (
                         <li key={i}>{item}</li>

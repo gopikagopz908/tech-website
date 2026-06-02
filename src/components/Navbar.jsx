@@ -53,7 +53,7 @@ const handleNavigation = (href) => {
   setIsOpen(false);
 };
   return (
-    <header className="sticky top-0 w-full z-50 bg-black/80 backdrop-blur-md text-white shadow-md px-6 py-4">
+    <header className="sticky top-0 w-full z-50 bg-black backdrop-blur-md text-white shadow-md px-6 py-4">
       {/* <div className="relative flex items-center justify-between max-w-7xl mx-auto">
    
         <div className="flex-shrink-0">

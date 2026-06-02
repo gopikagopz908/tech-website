@@ -97,6 +97,19 @@ const [description, setDescription] = useState("");
     };
   }, [showForm]);
 
+
+  useEffect(() => {
+  const openForm = () => {
+    setShowForm(true);
+  };
+
+  window.addEventListener("openEnquiryForm", openForm);
+
+  return () => {
+    window.removeEventListener("openEnquiryForm", openForm);
+  };
+}, []);
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 

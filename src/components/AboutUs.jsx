@@ -98,11 +98,16 @@ const AboutUs = () => {
     </span>
   </p>
 <div className="mb-2 sm:mt-14"> <button
-  onClick={() => {
-    document.getElementById("footer")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }}
+  
+    onClick={() => {
+      document.getElementById("footer")?.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent("openEnquiryForm"));
+      }, 500);
+    }}
  className="
       w-[150px]
       sm:w-[242px]
