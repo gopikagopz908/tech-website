@@ -18,47 +18,28 @@ export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const scrollYRef=useRef(0)
-
-  useEffect(() => {
-    const preventScroll = (e) => e.preventDefault();
-    const preventKeys = (e) => {
-      if (
-        ["ArrowUp", "ArrowDown", "Space", "PageUp", "PageDown"].includes(e.key)
-      ) {
-        e.preventDefault();
-      }
-    };
-
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.width = "100%";
-
-      window.scrollTo(0, 0);
-
-      window.addEventListener("touchmove", preventScroll, { passive: false });
-      window.addEventListener("keydown", preventKeys);
-      window.addEventListener("wheel", preventScroll, { passive: false }); // 🚫 Mouse wheel
-    } else {
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.width = "";
-
-      window.removeEventListener("touchmove", preventScroll);
-      window.removeEventListener("keydown", preventKeys);
-      window.removeEventListener("wheel", preventScroll);
+useEffect(() => {
+  const preventKeys = (e) => {
+    if (
+      ["ArrowUp", "ArrowDown", "Space", "PageUp", "PageDown"].includes(e.key)
+    ) {
+      e.preventDefault();
     }
+  };
 
-    return () => {
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.width = "";
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", preventKeys);
+  } else {
+    document.body.style.overflow = "";
+    window.removeEventListener("keydown", preventKeys);
+  }
 
-      window.removeEventListener("touchmove", preventScroll);
-      window.removeEventListener("keydown", preventKeys);
-      window.removeEventListener("wheel", preventScroll);
-    };
-  }, [isOpen]);
+  return () => {
+    document.body.style.overflow = "";
+    window.removeEventListener("keydown", preventKeys);
+  };
+}, [isOpen]);
 
   const menuVariants = {
     hidden: { clipPath: "circle(0% at 0% 0%)", opacity: 0 },
