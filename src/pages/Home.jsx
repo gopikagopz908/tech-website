@@ -42,7 +42,7 @@ export default function Home() {
         </script>
       </Helmet>
     <SmoothScroll>
-      <div className="min-h-screen w-full scroll-smooth bg-gradient-to-b from-black via-gray-900 to-black bg-red-600 text-white font-sans">
+      <div className="min-h-screen w-full scroll-smooth bg-gradient-to-b from-black via-gray-900 to-black bg-black text-white font-sans">
         {/* Sections with IDs */}
         <motion.div
           id="home"

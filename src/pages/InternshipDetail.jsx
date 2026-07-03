@@ -486,7 +486,7 @@ mt-8 lg:mt-[-10px]"    >
     </p>
 <button
   onClick={() => {
-    window.location.href = "https://timezapp.mentrictech.in/";
+    window.open("https://timezapp.mentrictech.in/", "_blank");
   }}
   className="
     absolute right-[15px] bottom-[8px]

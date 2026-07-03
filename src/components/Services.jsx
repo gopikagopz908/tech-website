@@ -15,7 +15,7 @@ const servicesLeft = [
     title: "Hardware Software Integration Services",
     description:
       "Software to connect, monitor, and control hardware devices in real time.",
-    image: "/r1.png",
+    image: "/r2.png",
   },
 ];
 
@@ -24,7 +24,7 @@ const servicesRight = [
     title: "Education & Skill Development Solutions",
     description:
       "Creating smart learning solutions that inspire, educate, and drive real progress.",
-    image: "/r2.png",
+    image: "/r1.png",
   },
   {
     title: "Digital Marketing",
