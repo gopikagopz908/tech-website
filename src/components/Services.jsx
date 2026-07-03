@@ -233,7 +233,7 @@ const Services = () => {
     <>
 
         <Helmet>
-        <title> Mentric Technologies</title>
+        <title>Services| Mentric Technologies</title>
         <meta
           name="description"
           content="Mentric Tech provides web and mobile app development, hardware-software integration, education technology solutions, and digital marketing services to help businesses grow."

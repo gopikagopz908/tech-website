@@ -34,7 +34,7 @@ export default function ScrollImageCards() {
   return (
     <>
       <Helmet>
-        <title> Mentric Technologies</title>
+        <title>  Our Resources| Mentric Technologies</title>
         <meta
           name="description"
           content="Explore Mentric Tech resources including our team, blog articles, and case studies. Discover insights, expertise, and success stories from our digital transformation projects."
