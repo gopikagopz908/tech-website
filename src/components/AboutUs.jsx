@@ -45,10 +45,10 @@ const AboutUs = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative z-10 flex flex-col-reverse   lg:flex-row items-center justify-between gap-12 md:gap-20   px-4 sm:px-6 md:px-12 xl:px-20 xl:py-20 md:py-32 max-w-screen-xl mx-auto">
+      <section className="relative z-10 flex flex-col-reverse  lg:flex-row items-center justify-between gap-12 md:gap-20   px-4 sm:px-6 md:px-12 xl:px-20 xl:py-20 md:py-32 max-w-screen-xl mx-auto">
         {/* Background Effects */}
         <motion.div
-          className="absolute left-0 top-0 w-full md:w-[600px] h-[600px] z-0"
+          className="absolute left-0 top-0 w-full md:w-[600px] h-[600px] z-0 "
           style={{
             background: "radial-gradient(circle at top left, #6b21a8, transparent 70%)",
             clipPath: "circle(60% at 30% 40%)",
@@ -145,8 +145,21 @@ line-height: normal
 
         {/* 3D Model Viewer */}
         <motion.div
-          className="w-full max-w-[280px] h-[280px] sm:max-w-[320px] sm:h-[320px] md:max-w-[440px] md:h-[440px] xl:max-w-[500px] xl:h-[500px] z-10"
-          initial={{ opacity: 0, scale: 0.8 }}
+  className="
+    w-full
+    max-w-[280px]
+    h-[280px]
+    mt-14
+    sm:mt-12
+    md:mt-0
+    sm:max-w-[320px]
+    sm:h-[320px]
+    md:max-w-[440px]
+    md:h-[440px]
+    xl:max-w-[500px]
+    xl:h-[500px]
+    z-10
+  "          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
         >
