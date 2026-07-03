@@ -233,10 +233,10 @@ const Services = () => {
     <>
 
         <Helmet>
-        <title>Our Services | Exalogic</title>
+        <title> Mentric Technologies</title>
         <meta
           name="description"
-          content="Exalogic provides web and mobile app development, hardware-software integration, education technology solutions, and digital marketing services to help businesses grow."
+          content="Mentric Tech provides web and mobile app development, hardware-software integration, education technology solutions, and digital marketing services to help businesses grow."
         />
         <meta
           name="keywords"

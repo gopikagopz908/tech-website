@@ -34,10 +34,10 @@ export default function ScrollImageCards() {
   return (
     <>
       <Helmet>
-        <title>Resources | Exalogic</title>
+        <title> Mentric Technologies</title>
         <meta
           name="description"
-          content="Explore Exalogic resources including our team, blog articles, and case studies. Discover insights, expertise, and success stories from our digital transformation projects."
+          content="Explore Mentric Tech resources including our team, blog articles, and case studies. Discover insights, expertise, and success stories from our digital transformation projects."
         />
       </Helmet>
     <section className="relative overflow-hidden bg-black py-24 px">
